@@ -1,0 +1,92 @@
+\hypertarget{namespacelearning__driver}{\section{learning\+\_\+driver Namespace Reference}
+\label{namespacelearning__driver}\index{learning\+\_\+driver@{learning\+\_\+driver}}
+}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \hyperlink{namespacelearning__driver_ad2e2ed20567d88c2310e3d56f480ff92}{learn\+\_\+model\+\_\+naive\+\_\+bayes}
+\begin{DoxyCompactList}\small\item\em Simple training (fitting) of the data set using the Naive Bayesian classifier. \end{DoxyCompactList}\item 
+def \hyperlink{namespacelearning__driver_a271d5c1e1b4364940878a76fce303bdc}{classify\+\_\+dataset}
+\begin{DoxyCompactList}\small\item\em Reads the data set from the file name provided in order to perform learning and final classification test providing the resulting accuracy of correct classification. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+string \hyperlink{namespacelearning__driver_abd05f3b18d8cfd764807c2bc99cd70de}{data\+\_\+file\+\_\+prefix} = \char`\"{}dataset-\/3rel\+\_\+components-\/quantized\+\_\+butterfly-\/2014-\/12-\/27\char`\"{}
+\item 
+\hyperlink{namespacelearning__driver_a5246f10c0d1e0b4f4df3597928bfbe22}{test\+\_\+against\+\_\+\+M\+N\+B} = False
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\hypertarget{namespacelearning__driver_a271d5c1e1b4364940878a76fce303bdc}{\index{learning\+\_\+driver@{learning\+\_\+driver}!classify\+\_\+dataset@{classify\+\_\+dataset}}
+\index{classify\+\_\+dataset@{classify\+\_\+dataset}!learning\+\_\+driver@{learning\+\_\+driver}}
+\subsubsection[{classify\+\_\+dataset}]{\setlength{\rightskip}{0pt plus 5cm}def learning\+\_\+driver.\+classify\+\_\+dataset (
+\begin{DoxyParamCaption}
+\item[{}]{data\+\_\+file\+\_\+prefix, }
+\item[{}]{load\+\_\+data\+\_\+from\+\_\+pickle = {\ttfamily False}}
+\end{DoxyParamCaption}
+)}}\label{namespacelearning__driver_a271d5c1e1b4364940878a76fce303bdc}
+
+
+Reads the data set from the file name provided in order to perform learning and final classification test providing the resulting accuracy of correct classification. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em data\+\_\+file\+\_\+prefix} & The prefix of the data set file name \\
+\hline
+{\em load\+\_\+data\+\_\+from\+\_\+pickle} & When set to True, a Python pickle (.pkl extension) will be used instead of the traditional comma separated valued (.csv extension) data set. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 56 of file learning\+\_\+driver.\+py.
+
+
+
+References common\+\_\+tools.\+load\+\_\+dataset\+\_\+from\+\_\+pickle(), common\+\_\+tools.\+read\+\_\+data(), and common\+\_\+tools.\+save\+\_\+dataset\+\_\+to\+\_\+pickle().
+
+\hypertarget{namespacelearning__driver_ad2e2ed20567d88c2310e3d56f480ff92}{\index{learning\+\_\+driver@{learning\+\_\+driver}!learn\+\_\+model\+\_\+naive\+\_\+bayes@{learn\+\_\+model\+\_\+naive\+\_\+bayes}}
+\index{learn\+\_\+model\+\_\+naive\+\_\+bayes@{learn\+\_\+model\+\_\+naive\+\_\+bayes}!learning\+\_\+driver@{learning\+\_\+driver}}
+\subsubsection[{learn\+\_\+model\+\_\+naive\+\_\+bayes}]{\setlength{\rightskip}{0pt plus 5cm}def learning\+\_\+driver.\+learn\+\_\+model\+\_\+naive\+\_\+bayes (
+\begin{DoxyParamCaption}
+\item[{}]{data\+\_\+file\+\_\+prefix, }
+\item[{}]{delimiter = {\ttfamily \char`\"{}}, }
+\item[{}]{percentage\+\_\+to\+\_\+train = {\ttfamily 90}}
+\end{DoxyParamCaption}
+)}}\label{namespacelearning__driver_ad2e2ed20567d88c2310e3d56f480ff92}
+
+
+Simple training (fitting) of the data set using the Naive Bayesian classifier. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em filename} & the database filename path \\
+\hline
+{\em porcentage\+\_\+to\+\_\+train} & The percentage from the database dedicated for training. The complimentary percentage is used for testing. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 24 of file learning\+\_\+driver.\+py.
+
+
+
+References common\+\_\+tools.\+read\+\_\+data().
+
+
+
+\subsection{Variable Documentation}
+\hypertarget{namespacelearning__driver_abd05f3b18d8cfd764807c2bc99cd70de}{\index{learning\+\_\+driver@{learning\+\_\+driver}!data\+\_\+file\+\_\+prefix@{data\+\_\+file\+\_\+prefix}}
+\index{data\+\_\+file\+\_\+prefix@{data\+\_\+file\+\_\+prefix}!learning\+\_\+driver@{learning\+\_\+driver}}
+\subsubsection[{data\+\_\+file\+\_\+prefix}]{\setlength{\rightskip}{0pt plus 5cm}string learning\+\_\+driver.\+data\+\_\+file\+\_\+prefix = \char`\"{}dataset-\/3rel\+\_\+components-\/quantized\+\_\+butterfly-\/2014-\/12-\/27\char`\"{}}}\label{namespacelearning__driver_abd05f3b18d8cfd764807c2bc99cd70de}
+
+
+Definition at line 86 of file learning\+\_\+driver.\+py.
+
+\hypertarget{namespacelearning__driver_a5246f10c0d1e0b4f4df3597928bfbe22}{\index{learning\+\_\+driver@{learning\+\_\+driver}!test\+\_\+against\+\_\+\+M\+N\+B@{test\+\_\+against\+\_\+\+M\+N\+B}}
+\index{test\+\_\+against\+\_\+\+M\+N\+B@{test\+\_\+against\+\_\+\+M\+N\+B}!learning\+\_\+driver@{learning\+\_\+driver}}
+\subsubsection[{test\+\_\+against\+\_\+\+M\+N\+B}]{\setlength{\rightskip}{0pt plus 5cm}learning\+\_\+driver.\+test\+\_\+against\+\_\+\+M\+N\+B = False}}\label{namespacelearning__driver_a5246f10c0d1e0b4f4df3597928bfbe22}
+
+
+Definition at line 88 of file learning\+\_\+driver.\+py.
+

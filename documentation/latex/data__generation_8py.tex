@@ -1,0 +1,66 @@
+\hypertarget{data__generation_8py}{\section{data\+\_\+generation.\+py File Reference}
+\label{data__generation_8py}\index{data\+\_\+generation.\+py@{data\+\_\+generation.\+py}}
+}
+\subsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \hyperlink{namespacedata__generation}{data\+\_\+generation}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \hyperlink{namespacedata__generation_a723f3547cdfa6066526de7b8964a0a49}{data\+\_\+generation.\+generate\+\_\+rules}
+\begin{DoxyCompactList}\small\item\em Generate \hyperlink{namespacelearning__driver}{learning\+\_\+driver} rules as a big L\+U\+T where irrelevant values get an invalid value of -\/1 Valid values for components are only nonnegative integers in the interval \mbox{[}0, 9\mbox{]}. \end{DoxyCompactList}\item 
+def \hyperlink{namespacedata__generation_a0a700e2749ed935a31ac58217132cb76}{data\+\_\+generation.\+generate\+\_\+dataset}
+\begin{DoxyCompactList}\small\item\em Irrelevant components are filled up with random values from a uniform distribution Last, the generated instance vectors (measurement records or rows including their associated class label) of the data set are shuffled and returned as the final result. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+list \hyperlink{namespacedata__generation_ab52d553b1eb5f4c6d065e0435753addc}{data\+\_\+generation.\+class\+\_\+labels} = \mbox{[}0, 1\mbox{]}
+\item 
+list \hyperlink{namespacedata__generation_a1c4e107080b11e6ef67edd30bfb93b05}{data\+\_\+generation.\+instances\+\_\+percentages} = \mbox{[}50, 50\mbox{]}
+\item 
+list \hyperlink{namespacedata__generation_afa9b1b91a7860372739bca028f41263b}{data\+\_\+generation.\+relevant\+\_\+components} = \mbox{[}0, 1, 8\mbox{]}
+\item 
+int \hyperlink{namespacedata__generation_a963ce4f506a2b3bb6acb94915445f716}{data\+\_\+generation.\+total\+\_\+num\+\_\+of\+\_\+instances} = 100000
+\item 
+int \hyperlink{namespacedata__generation_ad68308d6e9bf4bd2485a44ce0c52315c}{data\+\_\+generation.\+num\+\_\+of\+\_\+components} = 10
+\item 
+list \hyperlink{namespacedata__generation_a345ef2cc135025dccbfbba8502ba6d8d}{data\+\_\+generation.\+dataset\+\_\+header} = \mbox{[}\char`\"{}d\char`\"{} + str(fname + 1) for fname in range(num\+\_\+of\+\_\+components)\mbox{]}
+\item 
+string \hyperlink{namespacedata__generation_ad7ee72f39a9a602967e77e4da382566a}{data\+\_\+generation.\+path\+\_\+to\+\_\+output\+\_\+files} = \char`\"{}./Input\+Data/\char`\"{}
+\item 
+\hyperlink{namespacedata__generation_abf6964c9992abb3c8c479fa568833f1c}{data\+\_\+generation.\+will\+\_\+generate\+\_\+rules} = True
+\item 
+int \hyperlink{namespacedata__generation_adf1cda3bf67a0646998d7ad03f8d1337}{data\+\_\+generation.\+quant\+\_\+levels} = 5
+\item 
+\hyperlink{namespacedata__generation_ae8c6a78af0481f316865220c829b86d2}{data\+\_\+generation.\+save\+\_\+class\+\_\+as\+\_\+string} = True
+\item 
+tuple \hyperlink{namespacedata__generation_a0750f715835d704f388842c370b48499}{data\+\_\+generation.\+k\+\_\+comp\+\_\+str} = str(len(relevant\+\_\+components))
+\item 
+string \hyperlink{namespacedata__generation_ad5e85da3fcf335e51b7dacc9404e221b}{data\+\_\+generation.\+filename\+\_\+time} = k\+\_\+comp\+\_\+str+\char`\"{}rel\+\_\+components-\/quantized\+\_\+butterfly-\/2014-\/12-\/27\char`\"{}
+\item 
+list \hyperlink{namespacedata__generation_a4f985887946a96aa23f5ee6af6ec33fd}{data\+\_\+generation.\+custom\+\_\+fmt} = \mbox{[}\char`\"{}\%s\char`\"{} for fname in range(num\+\_\+of\+\_\+components)\mbox{]}
+\item 
+tuple \hyperlink{namespacedata__generation_a18484efee600914bdb61f4082236d2ba}{data\+\_\+generation.\+rules} = generate\+\_\+rules(class\+\_\+labels, num\+\_\+of\+\_\+components, relevant\+\_\+components, quant\+\_\+levels)
+\item 
+tuple \hyperlink{namespacedata__generation_a4f08e445af07b6a8af849d8fd67dfbc9}{data\+\_\+generation.\+now} = datetime.\+datetime.\+now()
+\item 
+string \hyperlink{namespacedata__generation_a2fd941c060f70244057a35a916a6a9d7}{data\+\_\+generation.\+rules\+\_\+filename} = path\+\_\+to\+\_\+output\+\_\+files+\char`\"{}rules-\/\char`\"{}
+\item 
+tuple \hyperlink{namespacedata__generation_aa245bd201fe9810d8a8d8d615c4915ee}{data\+\_\+generation.\+rules\+\_\+labels} = np.\+where(rules\mbox{[}\+:, -\/1\mbox{]} == 0, 'A', 'B')
+\item 
+tuple \hyperlink{namespacedata__generation_a1e7ee3bfd1df183fdb922bbc4e93d12e}{data\+\_\+generation.\+rules\+\_\+as\+\_\+str} = np.\+hstack((rules\mbox{[}\+:, \+:-\/1\mbox{]}.astype('S2'), rules\+\_\+labels.\+reshape(-\/1, 1)))
+\item 
+\hyperlink{namespacedata__generation_a65cdb95b35877149855b39ef209ada8e}{data\+\_\+generation.\+use\+\_\+string\+\_\+labels} = save\+\_\+class\+\_\+as\+\_\+string,\textbackslash{}
+\item 
+string \hyperlink{namespacedata__generation_a577eb8996c6d5ddad4042ac0552f5aaa}{data\+\_\+generation.\+num\+\_\+components} = 'int8'
+\item 
+tuple \hyperlink{namespacedata__generation_ad3ed025b5adf596264de6710e2b25996}{data\+\_\+generation.\+dataset} = generate\+\_\+dataset(rules, relevant\+\_\+components, total\+\_\+num\+\_\+of\+\_\+instances, instances\+\_\+percentages, quant\+\_\+levels)
+\item 
+string \hyperlink{namespacedata__generation_a65485117b9e70dfb1f8046f6bf221338}{data\+\_\+generation.\+dataset\+\_\+filename} = path\+\_\+to\+\_\+output\+\_\+files+\char`\"{}dataset-\/\char`\"{}
+\item 
+tuple \hyperlink{namespacedata__generation_ad88beaf5c221ab8fbfeac2fd7aaafe65}{data\+\_\+generation.\+dataset\+\_\+labels} = np.\+where(dataset\mbox{[}\+:, -\/1\mbox{]} == 0, 'A', 'B')
+\item 
+tuple \hyperlink{namespacedata__generation_ad40c466460ec72a381167165d38a2c07}{data\+\_\+generation.\+dataset\+\_\+as\+\_\+str} = np.\+hstack((dataset\mbox{[}\+:, \+:-\/1\mbox{]}.astype('S2'), dataset\+\_\+labels.\+reshape(-\/1, 1)))
+\end{DoxyCompactItemize}

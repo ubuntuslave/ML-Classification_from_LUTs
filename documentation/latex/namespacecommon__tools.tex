@@ -1,0 +1,298 @@
+\hypertarget{namespacecommon__tools}{\section{common\+\_\+tools Namespace Reference}
+\label{namespacecommon__tools}\index{common\+\_\+tools@{common\+\_\+tools}}
+}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \hyperlink{namespacecommon__tools_a99127ed524481a987098d0b646248ac7}{get\+\_\+namestr}
+\begin{DoxyCompactList}\small\item\em Finds and returns the variable name for the object instance in question in the desired namespace. \end{DoxyCompactList}\item 
+def \hyperlink{namespacecommon__tools_a31bbee936ad9ee3f26d71ba58c435125}{save\+\_\+obj\+\_\+in\+\_\+pickle}
+\item 
+def \hyperlink{namespacecommon__tools_ae02aaf0ee60b16dd5d22f2e3f20fd9e6}{load\+\_\+obj\+\_\+from\+\_\+pickle}
+\item 
+def \hyperlink{namespacecommon__tools_ae5d41b7419e727e4389ae0a37f684a7f}{save\+\_\+dataset\+\_\+to\+\_\+pickle}
+\item 
+def \hyperlink{namespacecommon__tools_a38d5594d132460ab544508a860c74840}{load\+\_\+dataset\+\_\+from\+\_\+pickle}
+\item 
+def \hyperlink{namespacecommon__tools_a7987ebb2fe78986ee5bd276b9ca23b54}{read\+\_\+data}
+\item 
+def \hyperlink{namespacecommon__tools_aaa8d6759ce602c7555a4f247523a7b17}{filter\+\_\+irrelevant\+\_\+features}
+\item 
+def \hyperlink{namespacecommon__tools_a0f555f84922eeeeef319b1c696a53398}{pdf}
+\item 
+def \hyperlink{namespacecommon__tools_affa5e6fbad6fb93eafef8208833518ac}{reverse\+\_\+axis\+\_\+elems}
+\item 
+def \hyperlink{namespacecommon__tools_a3c8bdaaa99b2ded40cae5110fe429dc9}{rms}
+\item 
+def \hyperlink{namespacecommon__tools_ac61789513b883ed1c0519fafbc04db09}{nanrms}
+\begin{DoxyCompactList}\small\item\em If you have nans in your data, you can do. \end{DoxyCompactList}\item 
+def \hyperlink{namespacecommon__tools_af05b64800eee31edb0e18ff46d0163f5}{weighted\+\_\+avg\+\_\+and\+\_\+std}
+\begin{DoxyCompactList}\small\item\em Return the weighted average and standard deviation. \end{DoxyCompactList}\item 
+def \hyperlink{namespacecommon__tools_a6176dbbdc3e730a07138b14a5cd8f48e}{mean\+\_\+and\+\_\+std}
+\begin{DoxyCompactList}\small\item\em Return the arithmetic mean or unweighted average and the standard deviation. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\hypertarget{namespacecommon__tools_aaa8d6759ce602c7555a4f247523a7b17}{\index{common\+\_\+tools@{common\+\_\+tools}!filter\+\_\+irrelevant\+\_\+features@{filter\+\_\+irrelevant\+\_\+features}}
+\index{filter\+\_\+irrelevant\+\_\+features@{filter\+\_\+irrelevant\+\_\+features}!common\+\_\+tools@{common\+\_\+tools}}
+\subsubsection[{filter\+\_\+irrelevant\+\_\+features}]{\setlength{\rightskip}{0pt plus 5cm}def common\+\_\+tools.\+filter\+\_\+irrelevant\+\_\+features (
+\begin{DoxyParamCaption}
+\item[{}]{feature\+\_\+data, }
+\item[{}]{labels, }
+\item[{}]{wanted\+\_\+num\+\_\+of\+\_\+features, }
+\item[{}]{use\+\_\+chi2 = {\ttfamily True}}
+\end{DoxyParamCaption}
+)}}\label{namespacecommon__tools_aaa8d6759ce602c7555a4f247523a7b17}
+
+\begin{DoxyParams}{Parameters}
+{\em use\+\_\+sklearn} & Indicates whether the filtering is done with scikit-\/learn's Select\+K\+Besr or a custom bruteforce procedure. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 110 of file common\+\_\+tools.\+py.
+
+\hypertarget{namespacecommon__tools_a99127ed524481a987098d0b646248ac7}{\index{common\+\_\+tools@{common\+\_\+tools}!get\+\_\+namestr@{get\+\_\+namestr}}
+\index{get\+\_\+namestr@{get\+\_\+namestr}!common\+\_\+tools@{common\+\_\+tools}}
+\subsubsection[{get\+\_\+namestr}]{\setlength{\rightskip}{0pt plus 5cm}def common\+\_\+tools.\+get\+\_\+namestr (
+\begin{DoxyParamCaption}
+\item[{}]{obj, }
+\item[{}]{namespace}
+\end{DoxyParamCaption}
+)}}\label{namespacecommon__tools_a99127ed524481a987098d0b646248ac7}
+
+
+Finds and returns the variable name for the object instance in question in the desired namespace. 
+
+For example \begin{DoxyVerb}>>> get_namestr(my_wow, globals())
+Out: 'my_wow'\end{DoxyVerb}
+ 
+
+Definition at line 23 of file common\+\_\+tools.\+py.
+
+
+
+Referenced by load\+\_\+obj\+\_\+from\+\_\+pickle(), and save\+\_\+obj\+\_\+in\+\_\+pickle().
+
+\hypertarget{namespacecommon__tools_a38d5594d132460ab544508a860c74840}{\index{common\+\_\+tools@{common\+\_\+tools}!load\+\_\+dataset\+\_\+from\+\_\+pickle@{load\+\_\+dataset\+\_\+from\+\_\+pickle}}
+\index{load\+\_\+dataset\+\_\+from\+\_\+pickle@{load\+\_\+dataset\+\_\+from\+\_\+pickle}!common\+\_\+tools@{common\+\_\+tools}}
+\subsubsection[{load\+\_\+dataset\+\_\+from\+\_\+pickle}]{\setlength{\rightskip}{0pt plus 5cm}def common\+\_\+tools.\+load\+\_\+dataset\+\_\+from\+\_\+pickle (
+\begin{DoxyParamCaption}
+\item[{}]{filename\+\_\+prefix}
+\end{DoxyParamCaption}
+)}}\label{namespacecommon__tools_a38d5594d132460ab544508a860c74840}
+
+
+Definition at line 51 of file common\+\_\+tools.\+py.
+
+
+
+References load\+\_\+obj\+\_\+from\+\_\+pickle().
+
+
+
+Referenced by learning\+\_\+driver.\+classify\+\_\+dataset().
+
+\hypertarget{namespacecommon__tools_ae02aaf0ee60b16dd5d22f2e3f20fd9e6}{\index{common\+\_\+tools@{common\+\_\+tools}!load\+\_\+obj\+\_\+from\+\_\+pickle@{load\+\_\+obj\+\_\+from\+\_\+pickle}}
+\index{load\+\_\+obj\+\_\+from\+\_\+pickle@{load\+\_\+obj\+\_\+from\+\_\+pickle}!common\+\_\+tools@{common\+\_\+tools}}
+\subsubsection[{load\+\_\+obj\+\_\+from\+\_\+pickle}]{\setlength{\rightskip}{0pt plus 5cm}def common\+\_\+tools.\+load\+\_\+obj\+\_\+from\+\_\+pickle (
+\begin{DoxyParamCaption}
+\item[{}]{filename, }
+\item[{}]{namespace = {\ttfamily None}}
+\end{DoxyParamCaption}
+)}}\label{namespacecommon__tools_ae02aaf0ee60b16dd5d22f2e3f20fd9e6}
+
+
+Definition at line 40 of file common\+\_\+tools.\+py.
+
+
+
+References get\+\_\+namestr().
+
+
+
+Referenced by load\+\_\+dataset\+\_\+from\+\_\+pickle().
+
+\hypertarget{namespacecommon__tools_a6176dbbdc3e730a07138b14a5cd8f48e}{\index{common\+\_\+tools@{common\+\_\+tools}!mean\+\_\+and\+\_\+std@{mean\+\_\+and\+\_\+std}}
+\index{mean\+\_\+and\+\_\+std@{mean\+\_\+and\+\_\+std}!common\+\_\+tools@{common\+\_\+tools}}
+\subsubsection[{mean\+\_\+and\+\_\+std}]{\setlength{\rightskip}{0pt plus 5cm}def common\+\_\+tools.\+mean\+\_\+and\+\_\+std (
+\begin{DoxyParamCaption}
+\item[{}]{values}
+\end{DoxyParamCaption}
+)}}\label{namespacecommon__tools_a6176dbbdc3e730a07138b14a5cd8f48e}
+
+
+Return the arithmetic mean or unweighted average and the standard deviation. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em values} & Numpy ndarrays of values \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 170 of file common\+\_\+tools.\+py.
+
+\hypertarget{namespacecommon__tools_ac61789513b883ed1c0519fafbc04db09}{\index{common\+\_\+tools@{common\+\_\+tools}!nanrms@{nanrms}}
+\index{nanrms@{nanrms}!common\+\_\+tools@{common\+\_\+tools}}
+\subsubsection[{nanrms}]{\setlength{\rightskip}{0pt plus 5cm}def common\+\_\+tools.\+nanrms (
+\begin{DoxyParamCaption}
+\item[{}]{x, }
+\item[{}]{axis = {\ttfamily None}}
+\end{DoxyParamCaption}
+)}}\label{namespacecommon__tools_ac61789513b883ed1c0519fafbc04db09}
+
+
+If you have nans in your data, you can do. 
+
+
+
+Definition at line 150 of file common\+\_\+tools.\+py.
+
+\hypertarget{namespacecommon__tools_a0f555f84922eeeeef319b1c696a53398}{\index{common\+\_\+tools@{common\+\_\+tools}!pdf@{pdf}}
+\index{pdf@{pdf}!common\+\_\+tools@{common\+\_\+tools}}
+\subsubsection[{pdf}]{\setlength{\rightskip}{0pt plus 5cm}def common\+\_\+tools.\+pdf (
+\begin{DoxyParamCaption}
+\item[{}]{point, }
+\item[{}]{cons, }
+\item[{}]{mean, }
+\item[{}]{det\+\_\+sigma}
+\end{DoxyParamCaption}
+)}}\label{namespacecommon__tools_a0f555f84922eeeeef319b1c696a53398}
+
+
+Definition at line 123 of file common\+\_\+tools.\+py.
+
+\hypertarget{namespacecommon__tools_a7987ebb2fe78986ee5bd276b9ca23b54}{\index{common\+\_\+tools@{common\+\_\+tools}!read\+\_\+data@{read\+\_\+data}}
+\index{read\+\_\+data@{read\+\_\+data}!common\+\_\+tools@{common\+\_\+tools}}
+\subsubsection[{read\+\_\+data}]{\setlength{\rightskip}{0pt plus 5cm}def common\+\_\+tools.\+read\+\_\+data (
+\begin{DoxyParamCaption}
+\item[{}]{filename, }
+\item[{}]{delimiter = {\ttfamily \char`\"{}}, }
+\item[{}]{feature\+\_\+indices = {\ttfamily None}, }
+\item[{}]{use\+\_\+string\+\_\+labels = {\ttfamily True}, }
+\item[{}]{given\+\_\+string\+\_\+labels = {\ttfamily False}, }
+\item[{}]{num\+\_\+components = {\ttfamily 10}, }
+\item[{}]{dtype = {\ttfamily 'uint8'}, }
+\item[{}]{has\+\_\+header = {\ttfamily True}, }
+\item[{}]{shuffle\+\_\+rows = {\ttfamily False}}
+\end{DoxyParamCaption}
+)}}\label{namespacecommon__tools_a7987ebb2fe78986ee5bd276b9ca23b54}
+
+\begin{DoxyParams}{Parameters}
+{\em filename} & the database filename path \\
+\hline
+{\em delimiter} & the string usefile delimeter (e.\+g. \char`\"{},\char`\"{}) \\
+\hline
+{\em feature\+\_\+indices} & The index of the columns for the desired indices. If nothing is passed, then all features are used. \\
+\hline
+{\em use\+\_\+string\+\_\+labels} & indicates whether labels are kept as strings, or if False, they should be indexed instead \\
+\hline
+{\em given\+\_\+string\+\_\+labels} & indicates whether class labels are strings. Use False (default) to imply the use of digit labels \\
+\hline
+{\em num\+\_\+components} & number of columns (feature dimensions) in the file. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the np array of features and the single-\/column array of the labels from the dataset being read. 
+\end{DoxyReturn}
+
+
+Definition at line 65 of file common\+\_\+tools.\+py.
+
+
+
+Referenced by learning\+\_\+driver.\+classify\+\_\+dataset(), and learning\+\_\+driver.\+learn\+\_\+model\+\_\+naive\+\_\+bayes().
+
+\hypertarget{namespacecommon__tools_affa5e6fbad6fb93eafef8208833518ac}{\index{common\+\_\+tools@{common\+\_\+tools}!reverse\+\_\+axis\+\_\+elems@{reverse\+\_\+axis\+\_\+elems}}
+\index{reverse\+\_\+axis\+\_\+elems@{reverse\+\_\+axis\+\_\+elems}!common\+\_\+tools@{common\+\_\+tools}}
+\subsubsection[{reverse\+\_\+axis\+\_\+elems}]{\setlength{\rightskip}{0pt plus 5cm}def common\+\_\+tools.\+reverse\+\_\+axis\+\_\+elems (
+\begin{DoxyParamCaption}
+\item[{}]{arr, }
+\item[{}]{k = {\ttfamily 0}}
+\end{DoxyParamCaption}
+)}}\label{namespacecommon__tools_affa5e6fbad6fb93eafef8208833518ac}
+
+\begin{DoxyParams}{Parameters}
+{\em arr} & the numpy ndarray to be reversed \\
+\hline
+{\em k} & The axis to be reversed Reverse the order of rows\+: set axis k=0 Reverse the order of columns\+: set axis k=1\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\+: the reversed numpy array 
+\end{DoxyReturn}
+
+
+Definition at line 138 of file common\+\_\+tools.\+py.
+
+\hypertarget{namespacecommon__tools_a3c8bdaaa99b2ded40cae5110fe429dc9}{\index{common\+\_\+tools@{common\+\_\+tools}!rms@{rms}}
+\index{rms@{rms}!common\+\_\+tools@{common\+\_\+tools}}
+\subsubsection[{rms}]{\setlength{\rightskip}{0pt plus 5cm}def common\+\_\+tools.\+rms (
+\begin{DoxyParamCaption}
+\item[{}]{x, }
+\item[{}]{axis = {\ttfamily None}}
+\end{DoxyParamCaption}
+)}}\label{namespacecommon__tools_a3c8bdaaa99b2ded40cae5110fe429dc9}
+
+
+Definition at line 142 of file common\+\_\+tools.\+py.
+
+\hypertarget{namespacecommon__tools_ae5d41b7419e727e4389ae0a37f684a7f}{\index{common\+\_\+tools@{common\+\_\+tools}!save\+\_\+dataset\+\_\+to\+\_\+pickle@{save\+\_\+dataset\+\_\+to\+\_\+pickle}}
+\index{save\+\_\+dataset\+\_\+to\+\_\+pickle@{save\+\_\+dataset\+\_\+to\+\_\+pickle}!common\+\_\+tools@{common\+\_\+tools}}
+\subsubsection[{save\+\_\+dataset\+\_\+to\+\_\+pickle}]{\setlength{\rightskip}{0pt plus 5cm}def common\+\_\+tools.\+save\+\_\+dataset\+\_\+to\+\_\+pickle (
+\begin{DoxyParamCaption}
+\item[{}]{all\+\_\+features\+\_\+data, }
+\item[{}]{all\+\_\+classes, }
+\item[{}]{filename\+\_\+prefix}
+\end{DoxyParamCaption}
+)}}\label{namespacecommon__tools_ae5d41b7419e727e4389ae0a37f684a7f}
+
+
+Definition at line 48 of file common\+\_\+tools.\+py.
+
+
+
+References save\+\_\+obj\+\_\+in\+\_\+pickle().
+
+
+
+Referenced by learning\+\_\+driver.\+classify\+\_\+dataset().
+
+\hypertarget{namespacecommon__tools_a31bbee936ad9ee3f26d71ba58c435125}{\index{common\+\_\+tools@{common\+\_\+tools}!save\+\_\+obj\+\_\+in\+\_\+pickle@{save\+\_\+obj\+\_\+in\+\_\+pickle}}
+\index{save\+\_\+obj\+\_\+in\+\_\+pickle@{save\+\_\+obj\+\_\+in\+\_\+pickle}!common\+\_\+tools@{common\+\_\+tools}}
+\subsubsection[{save\+\_\+obj\+\_\+in\+\_\+pickle}]{\setlength{\rightskip}{0pt plus 5cm}def common\+\_\+tools.\+save\+\_\+obj\+\_\+in\+\_\+pickle (
+\begin{DoxyParamCaption}
+\item[{}]{obj\+\_\+instance, }
+\item[{}]{filename, }
+\item[{}]{namespace = {\ttfamily None}}
+\end{DoxyParamCaption}
+)}}\label{namespacecommon__tools_a31bbee936ad9ee3f26d71ba58c435125}
+
+
+Definition at line 33 of file common\+\_\+tools.\+py.
+
+
+
+References get\+\_\+namestr().
+
+
+
+Referenced by save\+\_\+dataset\+\_\+to\+\_\+pickle().
+
+\hypertarget{namespacecommon__tools_af05b64800eee31edb0e18ff46d0163f5}{\index{common\+\_\+tools@{common\+\_\+tools}!weighted\+\_\+avg\+\_\+and\+\_\+std@{weighted\+\_\+avg\+\_\+and\+\_\+std}}
+\index{weighted\+\_\+avg\+\_\+and\+\_\+std@{weighted\+\_\+avg\+\_\+and\+\_\+std}!common\+\_\+tools@{common\+\_\+tools}}
+\subsubsection[{weighted\+\_\+avg\+\_\+and\+\_\+std}]{\setlength{\rightskip}{0pt plus 5cm}def common\+\_\+tools.\+weighted\+\_\+avg\+\_\+and\+\_\+std (
+\begin{DoxyParamCaption}
+\item[{}]{values, }
+\item[{}]{weights}
+\end{DoxyParamCaption}
+)}}\label{namespacecommon__tools_af05b64800eee31edb0e18ff46d0163f5}
+
+
+Return the weighted average and standard deviation. 
+
+values, weights -- Numpy ndarrays with the same shape. 
+
+Definition at line 159 of file common\+\_\+tools.\+py.
+

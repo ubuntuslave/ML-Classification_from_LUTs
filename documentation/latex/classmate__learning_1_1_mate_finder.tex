@@ -1,0 +1,655 @@
+\hypertarget{classmate__learning_1_1_mate_finder}{\section{mate\+\_\+learning.\+Mate\+Finder Class Reference}
+\label{classmate__learning_1_1_mate_finder}\index{mate\+\_\+learning.\+Mate\+Finder@{mate\+\_\+learning.\+Mate\+Finder}}
+}
+
+
+Used for the particular binary classification problem based on mates (usually groups of 2 -\/ pairs) across each component of a discrete-\/valued data set.  
+
+
+Inheritance diagram for mate\+\_\+learning.\+Mate\+Finder\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classmate__learning_1_1_mate_finder}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \hyperlink{classmate__learning_1_1_mate_finder_adb527f8a50802bee9dc7b976e38809bb}{\+\_\+\+\_\+init\+\_\+\+\_\+}
+\begin{DoxyCompactList}\small\item\em Constructor for the Pair\+Finder object out of the given data set. \end{DoxyCompactList}\item 
+def \hyperlink{classmate__learning_1_1_mate_finder_ad550cd77ba9a781f7eb09316de71f3f2}{validate\+\_\+groupings}
+\begin{DoxyCompactList}\small\item\em It removes overlapping groupings (matings) among the list of groupings provided. \end{DoxyCompactList}\item 
+def \hyperlink{classmate__learning_1_1_mate_finder_a45cb9b80fefff297b6c44a0d3bb81b83}{learn\+\_\+by\+\_\+mate\+\_\+discovery}
+\begin{DoxyCompactList}\small\item\em Brute force discovery of mates and relevant components during the training phase so that accuracy is the highest among all possibilities. \end{DoxyCompactList}\item 
+def \hyperlink{classmate__learning_1_1_mate_finder_ae5e19b18a5e29e8ada0303753f23aff0}{select\+\_\+\+K\+\_\+components}
+\begin{DoxyCompactList}\small\item\em Find the k number of components that produce the highest prediction accuracy from the training procedure\+: \end{DoxyCompactList}\item 
+def \hyperlink{classmate__learning_1_1_mate_finder_a2de3f01d6c2b6b73e8673abdd405b868}{get\+\_\+address}
+\begin{DoxyCompactList}\small\item\em Resolves the address in the training L\+U\+T pertaining the given matings (a list of candidate matches) on the data set portion provided. \end{DoxyCompactList}\item 
+def \hyperlink{classmate__learning_1_1_mate_finder_a096518e1bff5159c934c2e8affb5f40d}{get\+\_\+index\+\_\+address\+\_\+table}
+\begin{DoxyCompactList}\small\item\em This is a vectorized function that resolves the index (a.\+k.\+a. \end{DoxyCompactList}\item 
+def \hyperlink{classmate__learning_1_1_mate_finder_a6f3887d912b4f87eb612b6e67b38b8fd}{generate\+\_\+decision\+\_\+rules\+\_\+\+L\+U\+T}
+\begin{DoxyCompactList}\small\item\em A decision rules are learned from the provided list of matings (non-\/overlapping groups) and the chosen components. \end{DoxyCompactList}\item 
+def \hyperlink{classmate__learning_1_1_mate_finder_a79a1cb24bc6df0d732abd48b4ad0a63f}{compute\+\_\+prediction\+\_\+accuracy}
+\begin{DoxyCompactList}\small\item\em The accuracy of correct classification using the provided decision rules is computed statistically. \end{DoxyCompactList}\item 
+def \hyperlink{classmate__learning_1_1_mate_finder_aff6680733a2803e2e39f860fa63a0fd8}{predict\+\_\+category}
+\begin{DoxyCompactList}\small\item\em With the given list of matings (groupings) and the decision rules table, the list of measurement vectors (instances) are classified accordingly. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classmate__learning_1_1_mate_finder_a7347330ac72c85afd3f9fca87640d294}{all\+\_\+data}
+\item 
+\hyperlink{classmate__learning_1_1_mate_finder_a964c20920e14dfc4d5091142d429fe06}{all\+\_\+classes}
+\item 
+\hyperlink{classmate__learning_1_1_mate_finder_aeb435fdde37e9ac0cf72d03c25369201}{num\+\_\+of\+\_\+instances}
+\item 
+\hyperlink{classmate__learning_1_1_mate_finder_aaf6a72d379804901e89dc1c3e5ae5fd4}{num\+\_\+of\+\_\+components}
+\item 
+\hyperlink{classmate__learning_1_1_mate_finder_ad876941a4f4bf2e1dda05bf4881861e4}{num\+\_\+of\+\_\+values}
+\item 
+\hyperlink{classmate__learning_1_1_mate_finder_ac9e474a0c97351549960cd8baf0bbe24}{mating\+\_\+size}
+\item 
+\hyperlink{classmate__learning_1_1_mate_finder_a56553c3120e135bb4a969fd445f6bf6b}{num\+\_\+of\+\_\+mating\+\_\+groups}
+\item 
+\hyperlink{classmate__learning_1_1_mate_finder_af4f8fcfed10a8658bf2216f0deab368e}{map\+\_\+base}
+\item 
+\hyperlink{classmate__learning_1_1_mate_finder_a1d13f05feb21a3e48bf8822bf9c9fa67}{class\+\_\+learning}
+\item 
+\hyperlink{classmate__learning_1_1_mate_finder_a3fe8edaa8b6704d94252c2d1fc5b3360}{class\+\_\+test}
+\item 
+\hyperlink{classmate__learning_1_1_mate_finder_a04fe666220e1331ae3c444f3e8f6e3d3}{feat\+\_\+data\+\_\+learning\+\_\+train}
+\item 
+\hyperlink{classmate__learning_1_1_mate_finder_affd9b58edbaaa1e91f130ce9fcef958e}{class\+\_\+learning\+\_\+train}
+\item 
+\hyperlink{classmate__learning_1_1_mate_finder_a52a62e61246856c4d2e613a29ed86a8d}{feat\+\_\+data\+\_\+learning\+\_\+validate}
+\item 
+\hyperlink{classmate__learning_1_1_mate_finder_a958fd7ea70befe493a1d7f3d383d50c6}{class\+\_\+learning\+\_\+validate}
+\item 
+\hyperlink{classmate__learning_1_1_mate_finder_ad1790fa1f3465a0986165e11474723e2}{N\+\_\+train}
+\item 
+\hyperlink{classmate__learning_1_1_mate_finder_a6f92751c17d9794258343fd7c5d5a4d5}{c0\+\_\+indices\+\_\+train}
+\item 
+\hyperlink{classmate__learning_1_1_mate_finder_a247fd9ebecfbbcd44c638803cdaf2bce}{c1\+\_\+indices\+\_\+train}
+\item 
+\hyperlink{classmate__learning_1_1_mate_finder_a3577286991dc86227a3275cefd8d02af}{feat\+\_\+train\+\_\+c0}
+\item 
+\hyperlink{classmate__learning_1_1_mate_finder_a9c00a7acd25f415074e73b3d8862d38d}{feat\+\_\+train\+\_\+c1}
+\item 
+\hyperlink{classmate__learning_1_1_mate_finder_a72604851fbd5d9d64ef8f21ab3bbb08b}{values\+\_\+list}
+\item 
+\hyperlink{classmate__learning_1_1_mate_finder_a1feda94256f5a694c6102f83c3fc8ce7}{mates\+\_\+candidates\+\_\+per\+\_\+component}
+\item 
+\hyperlink{classmate__learning_1_1_mate_finder_ac42fe95eaa044c91077b75953128fc23}{address\+\_\+multiples}
+\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \hyperlink{classmate__learning_1_1_mate_finder_a43b8d42cc7b3529697262ad628c9cca9}{\+\_\+generate\+\_\+training\+\_\+\+L\+U\+T}
+\begin{DoxyCompactList}\small\item\em Generates an empty look-\/up table that will be addressed to train the learned with the given data. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Used for the particular binary classification problem based on mates (usually groups of 2 -\/ pairs) across each component of a discrete-\/valued data set. 
+
+This class provides procedures such as the removal of irrelevant components (selection of relevant components), as well as essential learning (training and validation) and testing procedures from learned decision tables of pairs.
+
+Once a \hyperlink{classmate__learning_1_1_mate_finder}{Mate\+Finder} object has been instantiated through the constructor, the interfacing methods employed by an external classifier are\+: \hyperlink{classmate__learning_1_1_mate_finder_a45cb9b80fefff297b6c44a0d3bb81b83}{learn\+\_\+by\+\_\+mate\+\_\+discovery()} and \hyperlink{classmate__learning_1_1_mate_finder_a79a1cb24bc6df0d732abd48b4ad0a63f}{compute\+\_\+prediction\+\_\+accuracy()} 
+
+Definition at line 28 of file mate\+\_\+learning.\+py.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classmate__learning_1_1_mate_finder_adb527f8a50802bee9dc7b976e38809bb}{\index{mate\+\_\+learning\+::\+Mate\+Finder@{mate\+\_\+learning\+::\+Mate\+Finder}!\+\_\+\+\_\+init\+\_\+\+\_\+@{\+\_\+\+\_\+init\+\_\+\+\_\+}}
+\index{\+\_\+\+\_\+init\+\_\+\+\_\+@{\+\_\+\+\_\+init\+\_\+\+\_\+}!mate\+\_\+learning\+::\+Mate\+Finder@{mate\+\_\+learning\+::\+Mate\+Finder}}
+\subsubsection[{\+\_\+\+\_\+init\+\_\+\+\_\+}]{\setlength{\rightskip}{0pt plus 5cm}def mate\+\_\+learning.\+Mate\+Finder.\+\_\+\+\_\+init\+\_\+\+\_\+ (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{component\+\_\+data, }
+\item[{}]{classification\+\_\+labels, }
+\item[{}]{mating\+\_\+size = {\ttfamily 2}}
+\end{DoxyParamCaption}
+)}}\label{classmate__learning_1_1_mate_finder_adb527f8a50802bee9dc7b976e38809bb}
+
+
+Constructor for the Pair\+Finder object out of the given data set. 
+
+\+: The data set (and corresponing classification labels) are split into the following portions\+: 50\% for learning phase\+: 25\% training + 25\% validation 50\% for testing phase\+: the real test using the learned table of decision rules
+
+This constructor initializes the reusable member variables that are called from other functions.
+
+
+\begin{DoxyParams}{Parameters}
+{\em component\+\_\+data} & A 2\+D matrix (numpy ndarray) of measurements (observations) to work with. A copy is created of this. \\
+\hline
+{\em classification\+\_\+labels} & The category classification\+\_\+labels as a 1\+D ndarray. Expected to be nonnegative integers \\
+\hline
+{\em mating\+\_\+size} & It should default to 2 (for pairs), but as in life, mating (a.\+k.\+a grouping) can be done using larger number of members. Note, the number of values (10 digits for this exercise) must be divisible by the mating\+\_\+size. For now, we basically can have only groups of 2 or 5. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 45 of file mate\+\_\+learning.\+py.
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classmate__learning_1_1_mate_finder_a43b8d42cc7b3529697262ad628c9cca9}{\index{mate\+\_\+learning\+::\+Mate\+Finder@{mate\+\_\+learning\+::\+Mate\+Finder}!\+\_\+generate\+\_\+training\+\_\+\+L\+U\+T@{\+\_\+generate\+\_\+training\+\_\+\+L\+U\+T}}
+\index{\+\_\+generate\+\_\+training\+\_\+\+L\+U\+T@{\+\_\+generate\+\_\+training\+\_\+\+L\+U\+T}!mate\+\_\+learning\+::\+Mate\+Finder@{mate\+\_\+learning\+::\+Mate\+Finder}}
+\subsubsection[{\+\_\+generate\+\_\+training\+\_\+\+L\+U\+T}]{\setlength{\rightskip}{0pt plus 5cm}def mate\+\_\+learning.\+Mate\+Finder.\+\_\+generate\+\_\+training\+\_\+\+L\+U\+T (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{cols}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{classmate__learning_1_1_mate_finder_a43b8d42cc7b3529697262ad628c9cca9}
+
+
+Generates an empty look-\/up table that will be addressed to train the learned with the given data. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em cols} & the number of columns (components) in the data set that are being used for the training.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\+: An empty 2-\/dimensional matrix that can be addressed while performing decision statistics 
+\end{DoxyReturn}
+
+
+Definition at line 201 of file mate\+\_\+learning.\+py.
+
+
+
+References mate\+\_\+learning.\+Mate\+Finder.\+num\+\_\+of\+\_\+mating\+\_\+groups.
+
+
+
+Referenced by mate\+\_\+learning.\+Mate\+Finder.\+generate\+\_\+decision\+\_\+rules\+\_\+\+L\+U\+T().
+
+\hypertarget{classmate__learning_1_1_mate_finder_a79a1cb24bc6df0d732abd48b4ad0a63f}{\index{mate\+\_\+learning\+::\+Mate\+Finder@{mate\+\_\+learning\+::\+Mate\+Finder}!compute\+\_\+prediction\+\_\+accuracy@{compute\+\_\+prediction\+\_\+accuracy}}
+\index{compute\+\_\+prediction\+\_\+accuracy@{compute\+\_\+prediction\+\_\+accuracy}!mate\+\_\+learning\+::\+Mate\+Finder@{mate\+\_\+learning\+::\+Mate\+Finder}}
+\subsubsection[{compute\+\_\+prediction\+\_\+accuracy}]{\setlength{\rightskip}{0pt plus 5cm}def mate\+\_\+learning.\+Mate\+Finder.\+compute\+\_\+prediction\+\_\+accuracy (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{matings, }
+\item[{}]{decisions\+\_\+\+L\+U\+T, }
+\item[{}]{relevant\+\_\+components = {\ttfamily None}, }
+\item[{}]{comp\+\_\+data\+\_\+test = {\ttfamily None}, }
+\item[{}]{class\+\_\+test = {\ttfamily None}, }
+\item[{}]{verbose = {\ttfamily False}}
+\end{DoxyParamCaption}
+)}}\label{classmate__learning_1_1_mate_finder_a79a1cb24bc6df0d732abd48b4ad0a63f}
+
+
+The accuracy of correct classification using the provided decision rules is computed statistically. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em matings} & An ordered list of indices used to group employing the map\+\_\+based of choice set in the constructor. By default, the mapping is pair-\/wise ordered from left to right. \\
+\hline
+{\em decisions\+\_\+\+L\+U\+T} & The learned rules in a L\+U\+T \\
+\hline
+{\em relevant\+\_\+components} & By default is set to None, so all components will be used. Otherwise, this specifies the selection of components to work with. \\
+\hline
+{\em comp\+\_\+data\+\_\+test} & If any, this is the component data set to use for predicting upon and testing the classification accuracy with the provided matings and decision rules. Otherwise, it defaults to using the test data set (the 50\% of the entire data set passed in the constructor) \\
+\hline
+{\em class\+\_\+test} & The classification labels associated with comp\+\_\+data\+\_\+test if any. \\
+\hline
+{\em verbose} & Indicates whether to enable message verbosity.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\+: The normalized accuracy of correct classification computed according to the specified parameters. 
+\end{DoxyReturn}
+
+
+Definition at line 293 of file mate\+\_\+learning.\+py.
+
+
+
+References mate\+\_\+learning.\+Mate\+Finder.\+class\+\_\+test, and mate\+\_\+learning.\+Mate\+Finder.\+predict\+\_\+category().
+
+
+
+Referenced by mate\+\_\+learning.\+Mate\+Finder.\+select\+\_\+\+K\+\_\+components().
+
+\hypertarget{classmate__learning_1_1_mate_finder_a6f3887d912b4f87eb612b6e67b38b8fd}{\index{mate\+\_\+learning\+::\+Mate\+Finder@{mate\+\_\+learning\+::\+Mate\+Finder}!generate\+\_\+decision\+\_\+rules\+\_\+\+L\+U\+T@{generate\+\_\+decision\+\_\+rules\+\_\+\+L\+U\+T}}
+\index{generate\+\_\+decision\+\_\+rules\+\_\+\+L\+U\+T@{generate\+\_\+decision\+\_\+rules\+\_\+\+L\+U\+T}!mate\+\_\+learning\+::\+Mate\+Finder@{mate\+\_\+learning\+::\+Mate\+Finder}}
+\subsubsection[{generate\+\_\+decision\+\_\+rules\+\_\+\+L\+U\+T}]{\setlength{\rightskip}{0pt plus 5cm}def mate\+\_\+learning.\+Mate\+Finder.\+generate\+\_\+decision\+\_\+rules\+\_\+\+L\+U\+T (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{matings, }
+\item[{}]{comp\+\_\+subset}
+\end{DoxyParamCaption}
+)}}\label{classmate__learning_1_1_mate_finder_a6f3887d912b4f87eb612b6e67b38b8fd}
+
+
+A decision rules are learned from the provided list of matings (non-\/overlapping groups) and the chosen components. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em matings} & An ordered list of indices used to group employing the map\+\_\+based of choice set in the constructor. By default, the mapping is pair-\/wise ordered from left to right. \\
+\hline
+{\em comp\+\_\+subset} & The list of selected component indices upon where the decision table is generated\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\+: The 1-\/\+D table of decision rules extracted from frequency analysis out of the learning portion of the data set 
+\end{DoxyReturn}
+
+
+Definition at line 255 of file mate\+\_\+learning.\+py.
+
+
+
+References mate\+\_\+learning.\+Mate\+Finder.\+\_\+generate\+\_\+training\+\_\+\+L\+U\+T(), mate\+\_\+learning.\+Mate\+Finder.\+feat\+\_\+train\+\_\+c0, mate\+\_\+learning.\+Mate\+Finder.\+feat\+\_\+train\+\_\+c1, mate\+\_\+learning.\+Mate\+Finder.\+get\+\_\+address(), mate\+\_\+learning.\+Mate\+Finder.\+get\+\_\+index\+\_\+address\+\_\+table(), and mate\+\_\+learning.\+Mate\+Finder.\+N\+\_\+train.
+
+
+
+Referenced by mate\+\_\+learning.\+Mate\+Finder.\+learn\+\_\+by\+\_\+mate\+\_\+discovery(), and mate\+\_\+learning.\+Mate\+Finder.\+select\+\_\+\+K\+\_\+components().
+
+\hypertarget{classmate__learning_1_1_mate_finder_a2de3f01d6c2b6b73e8673abdd405b868}{\index{mate\+\_\+learning\+::\+Mate\+Finder@{mate\+\_\+learning\+::\+Mate\+Finder}!get\+\_\+address@{get\+\_\+address}}
+\index{get\+\_\+address@{get\+\_\+address}!mate\+\_\+learning\+::\+Mate\+Finder@{mate\+\_\+learning\+::\+Mate\+Finder}}
+\subsubsection[{get\+\_\+address}]{\setlength{\rightskip}{0pt plus 5cm}def mate\+\_\+learning.\+Mate\+Finder.\+get\+\_\+address (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{matings, }
+\item[{}]{component\+\_\+data}
+\end{DoxyParamCaption}
+)}}\label{classmate__learning_1_1_mate_finder_a2de3f01d6c2b6b73e8673abdd405b868}
+
+
+Resolves the address in the training L\+U\+T pertaining the given matings (a list of candidate matches) on the data set portion provided. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em matings} & List of indices associated with the groupings (matches) \\
+\hline
+{\em component\+\_\+data} & The ndarray of component data for which addresses are resolved for\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\+: the numpy n-\/dimensional array of resolved addresses for the provided data and desired matings 
+\end{DoxyReturn}
+
+
+Definition at line 215 of file mate\+\_\+learning.\+py.
+
+
+
+References mate\+\_\+learning.\+Mate\+Finder.\+map\+\_\+base, and mate\+\_\+learning.\+Mate\+Finder.\+values\+\_\+list.
+
+
+
+Referenced by mate\+\_\+learning.\+Mate\+Finder.\+generate\+\_\+decision\+\_\+rules\+\_\+\+L\+U\+T(), and mate\+\_\+learning.\+Mate\+Finder.\+predict\+\_\+category().
+
+\hypertarget{classmate__learning_1_1_mate_finder_a096518e1bff5159c934c2e8affb5f40d}{\index{mate\+\_\+learning\+::\+Mate\+Finder@{mate\+\_\+learning\+::\+Mate\+Finder}!get\+\_\+index\+\_\+address\+\_\+table@{get\+\_\+index\+\_\+address\+\_\+table}}
+\index{get\+\_\+index\+\_\+address\+\_\+table@{get\+\_\+index\+\_\+address\+\_\+table}!mate\+\_\+learning\+::\+Mate\+Finder@{mate\+\_\+learning\+::\+Mate\+Finder}}
+\subsubsection[{get\+\_\+index\+\_\+address\+\_\+table}]{\setlength{\rightskip}{0pt plus 5cm}def mate\+\_\+learning.\+Mate\+Finder.\+get\+\_\+index\+\_\+address\+\_\+table (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{address}
+\end{DoxyParamCaption}
+)}}\label{classmate__learning_1_1_mate_finder_a096518e1bff5159c934c2e8affb5f40d}
+
+
+This is a vectorized function that resolves the index (a.\+k.\+a. 
+
+hash address) on the 1-\/\+D array of rules employing in the learning/testing procedure).
+
+
+\begin{DoxyParams}{Parameters}
+{\em address} & An array of address arrays to be hashed for on a 1-\/\+D table using the pertaining base (such as base 5 when dealing with groups of 2)\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\+: the resolved 1-\/\+D array of indices corresponding the input address. 
+\end{DoxyReturn}
+
+
+Definition at line 241 of file mate\+\_\+learning.\+py.
+
+
+
+References mate\+\_\+learning.\+Mate\+Finder.\+address\+\_\+multiples.
+
+
+
+Referenced by mate\+\_\+learning.\+Mate\+Finder.\+generate\+\_\+decision\+\_\+rules\+\_\+\+L\+U\+T(), and mate\+\_\+learning.\+Mate\+Finder.\+predict\+\_\+category().
+
+\hypertarget{classmate__learning_1_1_mate_finder_a45cb9b80fefff297b6c44a0d3bb81b83}{\index{mate\+\_\+learning\+::\+Mate\+Finder@{mate\+\_\+learning\+::\+Mate\+Finder}!learn\+\_\+by\+\_\+mate\+\_\+discovery@{learn\+\_\+by\+\_\+mate\+\_\+discovery}}
+\index{learn\+\_\+by\+\_\+mate\+\_\+discovery@{learn\+\_\+by\+\_\+mate\+\_\+discovery}!mate\+\_\+learning\+::\+Mate\+Finder@{mate\+\_\+learning\+::\+Mate\+Finder}}
+\subsubsection[{learn\+\_\+by\+\_\+mate\+\_\+discovery}]{\setlength{\rightskip}{0pt plus 5cm}def mate\+\_\+learning.\+Mate\+Finder.\+learn\+\_\+by\+\_\+mate\+\_\+discovery (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}}\label{classmate__learning_1_1_mate_finder_a45cb9b80fefff297b6c44a0d3bb81b83}
+
+
+Brute force discovery of mates and relevant components during the training phase so that accuracy is the highest among all possibilities. 
+
+\begin{DoxyReturn}{Returns}
+The 1-\/d numpy array (table) of learned rules. 
+
+List of best combination of mates (pairs) across the discovered relevant components 
+
+The list of discovered relevant components from the training phase 
+\end{DoxyReturn}
+
+
+Definition at line 120 of file mate\+\_\+learning.\+py.
+
+
+
+References mate\+\_\+learning.\+Mate\+Finder.\+generate\+\_\+decision\+\_\+rules\+\_\+\+L\+U\+T(), mate\+\_\+learning.\+Mate\+Finder.\+num\+\_\+of\+\_\+components, and mate\+\_\+learning.\+Mate\+Finder.\+select\+\_\+\+K\+\_\+components().
+
+\hypertarget{classmate__learning_1_1_mate_finder_aff6680733a2803e2e39f860fa63a0fd8}{\index{mate\+\_\+learning\+::\+Mate\+Finder@{mate\+\_\+learning\+::\+Mate\+Finder}!predict\+\_\+category@{predict\+\_\+category}}
+\index{predict\+\_\+category@{predict\+\_\+category}!mate\+\_\+learning\+::\+Mate\+Finder@{mate\+\_\+learning\+::\+Mate\+Finder}}
+\subsubsection[{predict\+\_\+category}]{\setlength{\rightskip}{0pt plus 5cm}def mate\+\_\+learning.\+Mate\+Finder.\+predict\+\_\+category (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{matings, }
+\item[{}]{decisions\+\_\+\+L\+U\+T, }
+\item[{}]{instance\+\_\+vector}
+\end{DoxyParamCaption}
+)}}\label{classmate__learning_1_1_mate_finder_aff6680733a2803e2e39f860fa63a0fd8}
+
+
+With the given list of matings (groupings) and the decision rules table, the list of measurement vectors (instances) are classified accordingly. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em matings} & An ordered list of indices used to group employing the map\+\_\+based of choice set in the constructor. By default, the mapping is pair-\/wise ordered from left to right. \\
+\hline
+{\em decisions\+\_\+\+L\+U\+T} & The learned rules in a L\+U\+T \\
+\hline
+{\em instance\+\_\+vector} & The list of measurement vectors (instances, a.\+k.\+a observations) to classify.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\+: The classification results corresponding to the supplied instance vectors for the specified rules and matings. 
+\end{DoxyReturn}
+
+
+Definition at line 325 of file mate\+\_\+learning.\+py.
+
+
+
+References mate\+\_\+learning.\+Mate\+Finder.\+get\+\_\+address(), and mate\+\_\+learning.\+Mate\+Finder.\+get\+\_\+index\+\_\+address\+\_\+table().
+
+
+
+Referenced by mate\+\_\+learning.\+Mate\+Finder.\+compute\+\_\+prediction\+\_\+accuracy().
+
+\hypertarget{classmate__learning_1_1_mate_finder_ae5e19b18a5e29e8ada0303753f23aff0}{\index{mate\+\_\+learning\+::\+Mate\+Finder@{mate\+\_\+learning\+::\+Mate\+Finder}!select\+\_\+\+K\+\_\+components@{select\+\_\+\+K\+\_\+components}}
+\index{select\+\_\+\+K\+\_\+components@{select\+\_\+\+K\+\_\+components}!mate\+\_\+learning\+::\+Mate\+Finder@{mate\+\_\+learning\+::\+Mate\+Finder}}
+\subsubsection[{select\+\_\+\+K\+\_\+components}]{\setlength{\rightskip}{0pt plus 5cm}def mate\+\_\+learning.\+Mate\+Finder.\+select\+\_\+\+K\+\_\+components (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{k\+\_\+comps, }
+\item[{}]{verbose = {\ttfamily True}}
+\end{DoxyParamCaption}
+)}}\label{classmate__learning_1_1_mate_finder_ae5e19b18a5e29e8ada0303753f23aff0}
+
+
+Find the k number of components that produce the highest prediction accuracy from the training procedure\+: 
+
+Learning of rules is performed on the training portion of the data set (technically, the 25\% of the entire data set) Accuracy validation to choose best is performed on the validation data set (technically, the other 25\% of the entire data set)
+
+
+\begin{DoxyParams}{Parameters}
+{\em k\+\_\+comps} & Indicates the number of components to be attempted the \char`\"{}brute-\/force\char`\"{} search upon.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The accuracy (normalized value from 0 to 1.\+0) obtained using the best selection of k components 
+
+List of best combination of mates (pairs) across the best selected components 
+
+The list of the best selected components 
+\end{DoxyReturn}
+
+
+Definition at line 160 of file mate\+\_\+learning.\+py.
+
+
+
+References mate\+\_\+learning.\+Mate\+Finder.\+class\+\_\+learning\+\_\+validate, mate\+\_\+learning.\+Mate\+Finder.\+compute\+\_\+prediction\+\_\+accuracy(), mate\+\_\+learning.\+Mate\+Finder.\+feat\+\_\+data\+\_\+learning\+\_\+validate, mate\+\_\+learning.\+Mate\+Finder.\+generate\+\_\+decision\+\_\+rules\+\_\+\+L\+U\+T(), mate\+\_\+learning.\+Mate\+Finder.\+mates\+\_\+candidates\+\_\+per\+\_\+component, and mate\+\_\+learning.\+Mate\+Finder.\+num\+\_\+of\+\_\+components.
+
+
+
+Referenced by mate\+\_\+learning.\+Mate\+Finder.\+learn\+\_\+by\+\_\+mate\+\_\+discovery().
+
+\hypertarget{classmate__learning_1_1_mate_finder_ad550cd77ba9a781f7eb09316de71f3f2}{\index{mate\+\_\+learning\+::\+Mate\+Finder@{mate\+\_\+learning\+::\+Mate\+Finder}!validate\+\_\+groupings@{validate\+\_\+groupings}}
+\index{validate\+\_\+groupings@{validate\+\_\+groupings}!mate\+\_\+learning\+::\+Mate\+Finder@{mate\+\_\+learning\+::\+Mate\+Finder}}
+\subsubsection[{validate\+\_\+groupings}]{\setlength{\rightskip}{0pt plus 5cm}def mate\+\_\+learning.\+Mate\+Finder.\+validate\+\_\+groupings (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{candidate\+\_\+lists}
+\end{DoxyParamCaption}
+)}}\label{classmate__learning_1_1_mate_finder_ad550cd77ba9a781f7eb09316de71f3f2}
+
+
+It removes overlapping groupings (matings) among the list of groupings provided. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em candidate\+\_\+lists} & An ndarray of all possible groupings (in our particular exercise, these are all possible combinations of 2 out of 10 digits)\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\+: the filtered list of non-\/overlapping groupings. The reduction in length for this list is crucial for faster results during learning procedure. 
+\end{DoxyReturn}
+
+
+Definition at line 96 of file mate\+\_\+learning.\+py.
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classmate__learning_1_1_mate_finder_ac42fe95eaa044c91077b75953128fc23}{\index{mate\+\_\+learning\+::\+Mate\+Finder@{mate\+\_\+learning\+::\+Mate\+Finder}!address\+\_\+multiples@{address\+\_\+multiples}}
+\index{address\+\_\+multiples@{address\+\_\+multiples}!mate\+\_\+learning\+::\+Mate\+Finder@{mate\+\_\+learning\+::\+Mate\+Finder}}
+\subsubsection[{address\+\_\+multiples}]{\setlength{\rightskip}{0pt plus 5cm}mate\+\_\+learning.\+Mate\+Finder.\+address\+\_\+multiples}}\label{classmate__learning_1_1_mate_finder_ac42fe95eaa044c91077b75953128fc23}
+
+
+Definition at line 85 of file mate\+\_\+learning.\+py.
+
+
+
+Referenced by mate\+\_\+learning.\+Mate\+Finder.\+get\+\_\+index\+\_\+address\+\_\+table().
+
+\hypertarget{classmate__learning_1_1_mate_finder_a964c20920e14dfc4d5091142d429fe06}{\index{mate\+\_\+learning\+::\+Mate\+Finder@{mate\+\_\+learning\+::\+Mate\+Finder}!all\+\_\+classes@{all\+\_\+classes}}
+\index{all\+\_\+classes@{all\+\_\+classes}!mate\+\_\+learning\+::\+Mate\+Finder@{mate\+\_\+learning\+::\+Mate\+Finder}}
+\subsubsection[{all\+\_\+classes}]{\setlength{\rightskip}{0pt plus 5cm}mate\+\_\+learning.\+Mate\+Finder.\+all\+\_\+classes}}\label{classmate__learning_1_1_mate_finder_a964c20920e14dfc4d5091142d429fe06}
+
+
+Definition at line 48 of file mate\+\_\+learning.\+py.
+
+\hypertarget{classmate__learning_1_1_mate_finder_a7347330ac72c85afd3f9fca87640d294}{\index{mate\+\_\+learning\+::\+Mate\+Finder@{mate\+\_\+learning\+::\+Mate\+Finder}!all\+\_\+data@{all\+\_\+data}}
+\index{all\+\_\+data@{all\+\_\+data}!mate\+\_\+learning\+::\+Mate\+Finder@{mate\+\_\+learning\+::\+Mate\+Finder}}
+\subsubsection[{all\+\_\+data}]{\setlength{\rightskip}{0pt plus 5cm}mate\+\_\+learning.\+Mate\+Finder.\+all\+\_\+data}}\label{classmate__learning_1_1_mate_finder_a7347330ac72c85afd3f9fca87640d294}
+
+
+Definition at line 47 of file mate\+\_\+learning.\+py.
+
+\hypertarget{classmate__learning_1_1_mate_finder_a6f92751c17d9794258343fd7c5d5a4d5}{\index{mate\+\_\+learning\+::\+Mate\+Finder@{mate\+\_\+learning\+::\+Mate\+Finder}!c0\+\_\+indices\+\_\+train@{c0\+\_\+indices\+\_\+train}}
+\index{c0\+\_\+indices\+\_\+train@{c0\+\_\+indices\+\_\+train}!mate\+\_\+learning\+::\+Mate\+Finder@{mate\+\_\+learning\+::\+Mate\+Finder}}
+\subsubsection[{c0\+\_\+indices\+\_\+train}]{\setlength{\rightskip}{0pt plus 5cm}mate\+\_\+learning.\+Mate\+Finder.\+c0\+\_\+indices\+\_\+train}}\label{classmate__learning_1_1_mate_finder_a6f92751c17d9794258343fd7c5d5a4d5}
+
+
+Definition at line 70 of file mate\+\_\+learning.\+py.
+
+\hypertarget{classmate__learning_1_1_mate_finder_a247fd9ebecfbbcd44c638803cdaf2bce}{\index{mate\+\_\+learning\+::\+Mate\+Finder@{mate\+\_\+learning\+::\+Mate\+Finder}!c1\+\_\+indices\+\_\+train@{c1\+\_\+indices\+\_\+train}}
+\index{c1\+\_\+indices\+\_\+train@{c1\+\_\+indices\+\_\+train}!mate\+\_\+learning\+::\+Mate\+Finder@{mate\+\_\+learning\+::\+Mate\+Finder}}
+\subsubsection[{c1\+\_\+indices\+\_\+train}]{\setlength{\rightskip}{0pt plus 5cm}mate\+\_\+learning.\+Mate\+Finder.\+c1\+\_\+indices\+\_\+train}}\label{classmate__learning_1_1_mate_finder_a247fd9ebecfbbcd44c638803cdaf2bce}
+
+
+Definition at line 71 of file mate\+\_\+learning.\+py.
+
+\hypertarget{classmate__learning_1_1_mate_finder_a1d13f05feb21a3e48bf8822bf9c9fa67}{\index{mate\+\_\+learning\+::\+Mate\+Finder@{mate\+\_\+learning\+::\+Mate\+Finder}!class\+\_\+learning@{class\+\_\+learning}}
+\index{class\+\_\+learning@{class\+\_\+learning}!mate\+\_\+learning\+::\+Mate\+Finder@{mate\+\_\+learning\+::\+Mate\+Finder}}
+\subsubsection[{class\+\_\+learning}]{\setlength{\rightskip}{0pt plus 5cm}mate\+\_\+learning.\+Mate\+Finder.\+class\+\_\+learning}}\label{classmate__learning_1_1_mate_finder_a1d13f05feb21a3e48bf8822bf9c9fa67}
+
+
+Definition at line 59 of file mate\+\_\+learning.\+py.
+
+\hypertarget{classmate__learning_1_1_mate_finder_affd9b58edbaaa1e91f130ce9fcef958e}{\index{mate\+\_\+learning\+::\+Mate\+Finder@{mate\+\_\+learning\+::\+Mate\+Finder}!class\+\_\+learning\+\_\+train@{class\+\_\+learning\+\_\+train}}
+\index{class\+\_\+learning\+\_\+train@{class\+\_\+learning\+\_\+train}!mate\+\_\+learning\+::\+Mate\+Finder@{mate\+\_\+learning\+::\+Mate\+Finder}}
+\subsubsection[{class\+\_\+learning\+\_\+train}]{\setlength{\rightskip}{0pt plus 5cm}mate\+\_\+learning.\+Mate\+Finder.\+class\+\_\+learning\+\_\+train}}\label{classmate__learning_1_1_mate_finder_affd9b58edbaaa1e91f130ce9fcef958e}
+
+
+Definition at line 64 of file mate\+\_\+learning.\+py.
+
+\hypertarget{classmate__learning_1_1_mate_finder_a958fd7ea70befe493a1d7f3d383d50c6}{\index{mate\+\_\+learning\+::\+Mate\+Finder@{mate\+\_\+learning\+::\+Mate\+Finder}!class\+\_\+learning\+\_\+validate@{class\+\_\+learning\+\_\+validate}}
+\index{class\+\_\+learning\+\_\+validate@{class\+\_\+learning\+\_\+validate}!mate\+\_\+learning\+::\+Mate\+Finder@{mate\+\_\+learning\+::\+Mate\+Finder}}
+\subsubsection[{class\+\_\+learning\+\_\+validate}]{\setlength{\rightskip}{0pt plus 5cm}mate\+\_\+learning.\+Mate\+Finder.\+class\+\_\+learning\+\_\+validate}}\label{classmate__learning_1_1_mate_finder_a958fd7ea70befe493a1d7f3d383d50c6}
+
+
+Definition at line 66 of file mate\+\_\+learning.\+py.
+
+
+
+Referenced by mate\+\_\+learning.\+Mate\+Finder.\+select\+\_\+\+K\+\_\+components().
+
+\hypertarget{classmate__learning_1_1_mate_finder_a3fe8edaa8b6704d94252c2d1fc5b3360}{\index{mate\+\_\+learning\+::\+Mate\+Finder@{mate\+\_\+learning\+::\+Mate\+Finder}!class\+\_\+test@{class\+\_\+test}}
+\index{class\+\_\+test@{class\+\_\+test}!mate\+\_\+learning\+::\+Mate\+Finder@{mate\+\_\+learning\+::\+Mate\+Finder}}
+\subsubsection[{class\+\_\+test}]{\setlength{\rightskip}{0pt plus 5cm}mate\+\_\+learning.\+Mate\+Finder.\+class\+\_\+test}}\label{classmate__learning_1_1_mate_finder_a3fe8edaa8b6704d94252c2d1fc5b3360}
+
+
+Definition at line 60 of file mate\+\_\+learning.\+py.
+
+
+
+Referenced by mate\+\_\+learning.\+Mate\+Finder.\+compute\+\_\+prediction\+\_\+accuracy().
+
+\hypertarget{classmate__learning_1_1_mate_finder_a04fe666220e1331ae3c444f3e8f6e3d3}{\index{mate\+\_\+learning\+::\+Mate\+Finder@{mate\+\_\+learning\+::\+Mate\+Finder}!feat\+\_\+data\+\_\+learning\+\_\+train@{feat\+\_\+data\+\_\+learning\+\_\+train}}
+\index{feat\+\_\+data\+\_\+learning\+\_\+train@{feat\+\_\+data\+\_\+learning\+\_\+train}!mate\+\_\+learning\+::\+Mate\+Finder@{mate\+\_\+learning\+::\+Mate\+Finder}}
+\subsubsection[{feat\+\_\+data\+\_\+learning\+\_\+train}]{\setlength{\rightskip}{0pt plus 5cm}mate\+\_\+learning.\+Mate\+Finder.\+feat\+\_\+data\+\_\+learning\+\_\+train}}\label{classmate__learning_1_1_mate_finder_a04fe666220e1331ae3c444f3e8f6e3d3}
+
+
+Definition at line 63 of file mate\+\_\+learning.\+py.
+
+\hypertarget{classmate__learning_1_1_mate_finder_a52a62e61246856c4d2e613a29ed86a8d}{\index{mate\+\_\+learning\+::\+Mate\+Finder@{mate\+\_\+learning\+::\+Mate\+Finder}!feat\+\_\+data\+\_\+learning\+\_\+validate@{feat\+\_\+data\+\_\+learning\+\_\+validate}}
+\index{feat\+\_\+data\+\_\+learning\+\_\+validate@{feat\+\_\+data\+\_\+learning\+\_\+validate}!mate\+\_\+learning\+::\+Mate\+Finder@{mate\+\_\+learning\+::\+Mate\+Finder}}
+\subsubsection[{feat\+\_\+data\+\_\+learning\+\_\+validate}]{\setlength{\rightskip}{0pt plus 5cm}mate\+\_\+learning.\+Mate\+Finder.\+feat\+\_\+data\+\_\+learning\+\_\+validate}}\label{classmate__learning_1_1_mate_finder_a52a62e61246856c4d2e613a29ed86a8d}
+
+
+Definition at line 65 of file mate\+\_\+learning.\+py.
+
+
+
+Referenced by mate\+\_\+learning.\+Mate\+Finder.\+select\+\_\+\+K\+\_\+components().
+
+\hypertarget{classmate__learning_1_1_mate_finder_a3577286991dc86227a3275cefd8d02af}{\index{mate\+\_\+learning\+::\+Mate\+Finder@{mate\+\_\+learning\+::\+Mate\+Finder}!feat\+\_\+train\+\_\+c0@{feat\+\_\+train\+\_\+c0}}
+\index{feat\+\_\+train\+\_\+c0@{feat\+\_\+train\+\_\+c0}!mate\+\_\+learning\+::\+Mate\+Finder@{mate\+\_\+learning\+::\+Mate\+Finder}}
+\subsubsection[{feat\+\_\+train\+\_\+c0}]{\setlength{\rightskip}{0pt plus 5cm}mate\+\_\+learning.\+Mate\+Finder.\+feat\+\_\+train\+\_\+c0}}\label{classmate__learning_1_1_mate_finder_a3577286991dc86227a3275cefd8d02af}
+
+
+Definition at line 72 of file mate\+\_\+learning.\+py.
+
+
+
+Referenced by mate\+\_\+learning.\+Mate\+Finder.\+generate\+\_\+decision\+\_\+rules\+\_\+\+L\+U\+T().
+
+\hypertarget{classmate__learning_1_1_mate_finder_a9c00a7acd25f415074e73b3d8862d38d}{\index{mate\+\_\+learning\+::\+Mate\+Finder@{mate\+\_\+learning\+::\+Mate\+Finder}!feat\+\_\+train\+\_\+c1@{feat\+\_\+train\+\_\+c1}}
+\index{feat\+\_\+train\+\_\+c1@{feat\+\_\+train\+\_\+c1}!mate\+\_\+learning\+::\+Mate\+Finder@{mate\+\_\+learning\+::\+Mate\+Finder}}
+\subsubsection[{feat\+\_\+train\+\_\+c1}]{\setlength{\rightskip}{0pt plus 5cm}mate\+\_\+learning.\+Mate\+Finder.\+feat\+\_\+train\+\_\+c1}}\label{classmate__learning_1_1_mate_finder_a9c00a7acd25f415074e73b3d8862d38d}
+
+
+Definition at line 73 of file mate\+\_\+learning.\+py.
+
+
+
+Referenced by mate\+\_\+learning.\+Mate\+Finder.\+generate\+\_\+decision\+\_\+rules\+\_\+\+L\+U\+T().
+
+\hypertarget{classmate__learning_1_1_mate_finder_af4f8fcfed10a8658bf2216f0deab368e}{\index{mate\+\_\+learning\+::\+Mate\+Finder@{mate\+\_\+learning\+::\+Mate\+Finder}!map\+\_\+base@{map\+\_\+base}}
+\index{map\+\_\+base@{map\+\_\+base}!mate\+\_\+learning\+::\+Mate\+Finder@{mate\+\_\+learning\+::\+Mate\+Finder}}
+\subsubsection[{map\+\_\+base}]{\setlength{\rightskip}{0pt plus 5cm}mate\+\_\+learning.\+Mate\+Finder.\+map\+\_\+base}}\label{classmate__learning_1_1_mate_finder_af4f8fcfed10a8658bf2216f0deab368e}
+
+
+Definition at line 54 of file mate\+\_\+learning.\+py.
+
+
+
+Referenced by mate\+\_\+learning.\+Mate\+Finder.\+get\+\_\+address().
+
+\hypertarget{classmate__learning_1_1_mate_finder_a1feda94256f5a694c6102f83c3fc8ce7}{\index{mate\+\_\+learning\+::\+Mate\+Finder@{mate\+\_\+learning\+::\+Mate\+Finder}!mates\+\_\+candidates\+\_\+per\+\_\+component@{mates\+\_\+candidates\+\_\+per\+\_\+component}}
+\index{mates\+\_\+candidates\+\_\+per\+\_\+component@{mates\+\_\+candidates\+\_\+per\+\_\+component}!mate\+\_\+learning\+::\+Mate\+Finder@{mate\+\_\+learning\+::\+Mate\+Finder}}
+\subsubsection[{mates\+\_\+candidates\+\_\+per\+\_\+component}]{\setlength{\rightskip}{0pt plus 5cm}mate\+\_\+learning.\+Mate\+Finder.\+mates\+\_\+candidates\+\_\+per\+\_\+component}}\label{classmate__learning_1_1_mate_finder_a1feda94256f5a694c6102f83c3fc8ce7}
+
+
+Definition at line 82 of file mate\+\_\+learning.\+py.
+
+
+
+Referenced by mate\+\_\+learning.\+Mate\+Finder.\+select\+\_\+\+K\+\_\+components().
+
+\hypertarget{classmate__learning_1_1_mate_finder_ac9e474a0c97351549960cd8baf0bbe24}{\index{mate\+\_\+learning\+::\+Mate\+Finder@{mate\+\_\+learning\+::\+Mate\+Finder}!mating\+\_\+size@{mating\+\_\+size}}
+\index{mating\+\_\+size@{mating\+\_\+size}!mate\+\_\+learning\+::\+Mate\+Finder@{mate\+\_\+learning\+::\+Mate\+Finder}}
+\subsubsection[{mating\+\_\+size}]{\setlength{\rightskip}{0pt plus 5cm}mate\+\_\+learning.\+Mate\+Finder.\+mating\+\_\+size}}\label{classmate__learning_1_1_mate_finder_ac9e474a0c97351549960cd8baf0bbe24}
+
+
+Definition at line 52 of file mate\+\_\+learning.\+py.
+
+\hypertarget{classmate__learning_1_1_mate_finder_ad1790fa1f3465a0986165e11474723e2}{\index{mate\+\_\+learning\+::\+Mate\+Finder@{mate\+\_\+learning\+::\+Mate\+Finder}!N\+\_\+train@{N\+\_\+train}}
+\index{N\+\_\+train@{N\+\_\+train}!mate\+\_\+learning\+::\+Mate\+Finder@{mate\+\_\+learning\+::\+Mate\+Finder}}
+\subsubsection[{N\+\_\+train}]{\setlength{\rightskip}{0pt plus 5cm}mate\+\_\+learning.\+Mate\+Finder.\+N\+\_\+train}}\label{classmate__learning_1_1_mate_finder_ad1790fa1f3465a0986165e11474723e2}
+
+
+Definition at line 67 of file mate\+\_\+learning.\+py.
+
+
+
+Referenced by mate\+\_\+learning.\+Mate\+Finder.\+generate\+\_\+decision\+\_\+rules\+\_\+\+L\+U\+T().
+
+\hypertarget{classmate__learning_1_1_mate_finder_aaf6a72d379804901e89dc1c3e5ae5fd4}{\index{mate\+\_\+learning\+::\+Mate\+Finder@{mate\+\_\+learning\+::\+Mate\+Finder}!num\+\_\+of\+\_\+components@{num\+\_\+of\+\_\+components}}
+\index{num\+\_\+of\+\_\+components@{num\+\_\+of\+\_\+components}!mate\+\_\+learning\+::\+Mate\+Finder@{mate\+\_\+learning\+::\+Mate\+Finder}}
+\subsubsection[{num\+\_\+of\+\_\+components}]{\setlength{\rightskip}{0pt plus 5cm}mate\+\_\+learning.\+Mate\+Finder.\+num\+\_\+of\+\_\+components}}\label{classmate__learning_1_1_mate_finder_aaf6a72d379804901e89dc1c3e5ae5fd4}
+
+
+Definition at line 50 of file mate\+\_\+learning.\+py.
+
+
+
+Referenced by mate\+\_\+learning.\+Mate\+Finder.\+learn\+\_\+by\+\_\+mate\+\_\+discovery(), and mate\+\_\+learning.\+Mate\+Finder.\+select\+\_\+\+K\+\_\+components().
+
+\hypertarget{classmate__learning_1_1_mate_finder_aeb435fdde37e9ac0cf72d03c25369201}{\index{mate\+\_\+learning\+::\+Mate\+Finder@{mate\+\_\+learning\+::\+Mate\+Finder}!num\+\_\+of\+\_\+instances@{num\+\_\+of\+\_\+instances}}
+\index{num\+\_\+of\+\_\+instances@{num\+\_\+of\+\_\+instances}!mate\+\_\+learning\+::\+Mate\+Finder@{mate\+\_\+learning\+::\+Mate\+Finder}}
+\subsubsection[{num\+\_\+of\+\_\+instances}]{\setlength{\rightskip}{0pt plus 5cm}mate\+\_\+learning.\+Mate\+Finder.\+num\+\_\+of\+\_\+instances}}\label{classmate__learning_1_1_mate_finder_aeb435fdde37e9ac0cf72d03c25369201}
+
+
+Definition at line 49 of file mate\+\_\+learning.\+py.
+
+\hypertarget{classmate__learning_1_1_mate_finder_a56553c3120e135bb4a969fd445f6bf6b}{\index{mate\+\_\+learning\+::\+Mate\+Finder@{mate\+\_\+learning\+::\+Mate\+Finder}!num\+\_\+of\+\_\+mating\+\_\+groups@{num\+\_\+of\+\_\+mating\+\_\+groups}}
+\index{num\+\_\+of\+\_\+mating\+\_\+groups@{num\+\_\+of\+\_\+mating\+\_\+groups}!mate\+\_\+learning\+::\+Mate\+Finder@{mate\+\_\+learning\+::\+Mate\+Finder}}
+\subsubsection[{num\+\_\+of\+\_\+mating\+\_\+groups}]{\setlength{\rightskip}{0pt plus 5cm}mate\+\_\+learning.\+Mate\+Finder.\+num\+\_\+of\+\_\+mating\+\_\+groups}}\label{classmate__learning_1_1_mate_finder_a56553c3120e135bb4a969fd445f6bf6b}
+
+
+Definition at line 53 of file mate\+\_\+learning.\+py.
+
+
+
+Referenced by mate\+\_\+learning.\+Mate\+Finder.\+\_\+generate\+\_\+training\+\_\+\+L\+U\+T().
+
+\hypertarget{classmate__learning_1_1_mate_finder_ad876941a4f4bf2e1dda05bf4881861e4}{\index{mate\+\_\+learning\+::\+Mate\+Finder@{mate\+\_\+learning\+::\+Mate\+Finder}!num\+\_\+of\+\_\+values@{num\+\_\+of\+\_\+values}}
+\index{num\+\_\+of\+\_\+values@{num\+\_\+of\+\_\+values}!mate\+\_\+learning\+::\+Mate\+Finder@{mate\+\_\+learning\+::\+Mate\+Finder}}
+\subsubsection[{num\+\_\+of\+\_\+values}]{\setlength{\rightskip}{0pt plus 5cm}mate\+\_\+learning.\+Mate\+Finder.\+num\+\_\+of\+\_\+values}}\label{classmate__learning_1_1_mate_finder_ad876941a4f4bf2e1dda05bf4881861e4}
+
+
+Definition at line 51 of file mate\+\_\+learning.\+py.
+
+\hypertarget{classmate__learning_1_1_mate_finder_a72604851fbd5d9d64ef8f21ab3bbb08b}{\index{mate\+\_\+learning\+::\+Mate\+Finder@{mate\+\_\+learning\+::\+Mate\+Finder}!values\+\_\+list@{values\+\_\+list}}
+\index{values\+\_\+list@{values\+\_\+list}!mate\+\_\+learning\+::\+Mate\+Finder@{mate\+\_\+learning\+::\+Mate\+Finder}}
+\subsubsection[{values\+\_\+list}]{\setlength{\rightskip}{0pt plus 5cm}mate\+\_\+learning.\+Mate\+Finder.\+values\+\_\+list}}\label{classmate__learning_1_1_mate_finder_a72604851fbd5d9d64ef8f21ab3bbb08b}
+
+
+Definition at line 78 of file mate\+\_\+learning.\+py.
+
+
+
+Referenced by mate\+\_\+learning.\+Mate\+Finder.\+get\+\_\+address().
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{mate__learning_8py}{mate\+\_\+learning.\+py}\end{DoxyCompactItemize}

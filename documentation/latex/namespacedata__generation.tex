@@ -1,0 +1,304 @@
+\hypertarget{namespacedata__generation}{\section{data\+\_\+generation Namespace Reference}
+\label{namespacedata__generation}\index{data\+\_\+generation@{data\+\_\+generation}}
+}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \hyperlink{namespacedata__generation_a723f3547cdfa6066526de7b8964a0a49}{generate\+\_\+rules}
+\begin{DoxyCompactList}\small\item\em Generate \hyperlink{namespacelearning__driver}{learning\+\_\+driver} rules as a big L\+U\+T where irrelevant values get an invalid value of -\/1 Valid values for components are only nonnegative integers in the interval \mbox{[}0, 9\mbox{]}. \end{DoxyCompactList}\item 
+def \hyperlink{namespacedata__generation_a0a700e2749ed935a31ac58217132cb76}{generate\+\_\+dataset}
+\begin{DoxyCompactList}\small\item\em Irrelevant components are filled up with random values from a uniform distribution Last, the generated instance vectors (measurement records or rows including their associated class label) of the data set are shuffled and returned as the final result. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+list \hyperlink{namespacedata__generation_ab52d553b1eb5f4c6d065e0435753addc}{class\+\_\+labels} = \mbox{[}0, 1\mbox{]}
+\item 
+list \hyperlink{namespacedata__generation_a1c4e107080b11e6ef67edd30bfb93b05}{instances\+\_\+percentages} = \mbox{[}50, 50\mbox{]}
+\item 
+list \hyperlink{namespacedata__generation_afa9b1b91a7860372739bca028f41263b}{relevant\+\_\+components} = \mbox{[}0, 1, 8\mbox{]}
+\item 
+int \hyperlink{namespacedata__generation_a963ce4f506a2b3bb6acb94915445f716}{total\+\_\+num\+\_\+of\+\_\+instances} = 100000
+\item 
+int \hyperlink{namespacedata__generation_ad68308d6e9bf4bd2485a44ce0c52315c}{num\+\_\+of\+\_\+components} = 10
+\item 
+list \hyperlink{namespacedata__generation_a345ef2cc135025dccbfbba8502ba6d8d}{dataset\+\_\+header} = \mbox{[}\char`\"{}d\char`\"{} + str(fname + 1) for fname in range(\hyperlink{namespacedata__generation_ad68308d6e9bf4bd2485a44ce0c52315c}{num\+\_\+of\+\_\+components})\mbox{]}
+\item 
+string \hyperlink{namespacedata__generation_ad7ee72f39a9a602967e77e4da382566a}{path\+\_\+to\+\_\+output\+\_\+files} = \char`\"{}./Input\+Data/\char`\"{}
+\item 
+\hyperlink{namespacedata__generation_abf6964c9992abb3c8c479fa568833f1c}{will\+\_\+generate\+\_\+rules} = True
+\item 
+int \hyperlink{namespacedata__generation_adf1cda3bf67a0646998d7ad03f8d1337}{quant\+\_\+levels} = 5
+\item 
+\hyperlink{namespacedata__generation_ae8c6a78af0481f316865220c829b86d2}{save\+\_\+class\+\_\+as\+\_\+string} = True
+\item 
+tuple \hyperlink{namespacedata__generation_a0750f715835d704f388842c370b48499}{k\+\_\+comp\+\_\+str} = str(len(\hyperlink{namespacedata__generation_afa9b1b91a7860372739bca028f41263b}{relevant\+\_\+components}))
+\item 
+string \hyperlink{namespacedata__generation_ad5e85da3fcf335e51b7dacc9404e221b}{filename\+\_\+time} = \hyperlink{namespacedata__generation_a0750f715835d704f388842c370b48499}{k\+\_\+comp\+\_\+str}+\char`\"{}rel\+\_\+components-\/quantized\+\_\+butterfly-\/2014-\/12-\/27\char`\"{}
+\item 
+list \hyperlink{namespacedata__generation_a4f985887946a96aa23f5ee6af6ec33fd}{custom\+\_\+fmt} = \mbox{[}\char`\"{}\%s\char`\"{} for fname in range(\hyperlink{namespacedata__generation_ad68308d6e9bf4bd2485a44ce0c52315c}{num\+\_\+of\+\_\+components})\mbox{]}
+\item 
+tuple \hyperlink{namespacedata__generation_a18484efee600914bdb61f4082236d2ba}{rules} = \hyperlink{namespacedata__generation_a723f3547cdfa6066526de7b8964a0a49}{generate\+\_\+rules}(\hyperlink{namespacedata__generation_ab52d553b1eb5f4c6d065e0435753addc}{class\+\_\+labels}, \hyperlink{namespacedata__generation_ad68308d6e9bf4bd2485a44ce0c52315c}{num\+\_\+of\+\_\+components}, \hyperlink{namespacedata__generation_afa9b1b91a7860372739bca028f41263b}{relevant\+\_\+components}, \hyperlink{namespacedata__generation_adf1cda3bf67a0646998d7ad03f8d1337}{quant\+\_\+levels})
+\item 
+tuple \hyperlink{namespacedata__generation_a4f08e445af07b6a8af849d8fd67dfbc9}{now} = datetime.\+datetime.\+now()
+\item 
+string \hyperlink{namespacedata__generation_a2fd941c060f70244057a35a916a6a9d7}{rules\+\_\+filename} = \hyperlink{namespacedata__generation_ad7ee72f39a9a602967e77e4da382566a}{path\+\_\+to\+\_\+output\+\_\+files}+\char`\"{}rules-\/\char`\"{}
+\item 
+tuple \hyperlink{namespacedata__generation_aa245bd201fe9810d8a8d8d615c4915ee}{rules\+\_\+labels} = np.\+where(\hyperlink{namespacedata__generation_a18484efee600914bdb61f4082236d2ba}{rules}\mbox{[}\+:, -\/1\mbox{]} == 0, 'A', 'B')
+\item 
+tuple \hyperlink{namespacedata__generation_a1e7ee3bfd1df183fdb922bbc4e93d12e}{rules\+\_\+as\+\_\+str} = np.\+hstack((\hyperlink{namespacedata__generation_a18484efee600914bdb61f4082236d2ba}{rules}\mbox{[}\+:, \+:-\/1\mbox{]}.astype('S2'), rules\+\_\+labels.\+reshape(-\/1, 1)))
+\item 
+\hyperlink{namespacedata__generation_a65cdb95b35877149855b39ef209ada8e}{use\+\_\+string\+\_\+labels} = \hyperlink{namespacedata__generation_ae8c6a78af0481f316865220c829b86d2}{save\+\_\+class\+\_\+as\+\_\+string},\textbackslash{}
+\item 
+string \hyperlink{namespacedata__generation_a577eb8996c6d5ddad4042ac0552f5aaa}{num\+\_\+components} = 'int8'
+\item 
+tuple \hyperlink{namespacedata__generation_ad3ed025b5adf596264de6710e2b25996}{dataset} = \hyperlink{namespacedata__generation_a0a700e2749ed935a31ac58217132cb76}{generate\+\_\+dataset}(\hyperlink{namespacedata__generation_a18484efee600914bdb61f4082236d2ba}{rules}, \hyperlink{namespacedata__generation_afa9b1b91a7860372739bca028f41263b}{relevant\+\_\+components}, \hyperlink{namespacedata__generation_a963ce4f506a2b3bb6acb94915445f716}{total\+\_\+num\+\_\+of\+\_\+instances}, \hyperlink{namespacedata__generation_a1c4e107080b11e6ef67edd30bfb93b05}{instances\+\_\+percentages}, \hyperlink{namespacedata__generation_adf1cda3bf67a0646998d7ad03f8d1337}{quant\+\_\+levels})
+\item 
+string \hyperlink{namespacedata__generation_a65485117b9e70dfb1f8046f6bf221338}{dataset\+\_\+filename} = \hyperlink{namespacedata__generation_ad7ee72f39a9a602967e77e4da382566a}{path\+\_\+to\+\_\+output\+\_\+files}+\char`\"{}dataset-\/\char`\"{}
+\item 
+tuple \hyperlink{namespacedata__generation_ad88beaf5c221ab8fbfeac2fd7aaafe65}{dataset\+\_\+labels} = np.\+where(\hyperlink{namespacedata__generation_ad3ed025b5adf596264de6710e2b25996}{dataset}\mbox{[}\+:, -\/1\mbox{]} == 0, 'A', 'B')
+\item 
+tuple \hyperlink{namespacedata__generation_ad40c466460ec72a381167165d38a2c07}{dataset\+\_\+as\+\_\+str} = np.\+hstack((\hyperlink{namespacedata__generation_ad3ed025b5adf596264de6710e2b25996}{dataset}\mbox{[}\+:, \+:-\/1\mbox{]}.astype('S2'), dataset\+\_\+labels.\+reshape(-\/1, 1)))
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\hypertarget{namespacedata__generation_a0a700e2749ed935a31ac58217132cb76}{\index{data\+\_\+generation@{data\+\_\+generation}!generate\+\_\+dataset@{generate\+\_\+dataset}}
+\index{generate\+\_\+dataset@{generate\+\_\+dataset}!data\+\_\+generation@{data\+\_\+generation}}
+\subsubsection[{generate\+\_\+dataset}]{\setlength{\rightskip}{0pt plus 5cm}def data\+\_\+generation.\+generate\+\_\+dataset (
+\begin{DoxyParamCaption}
+\item[{}]{rules, }
+\item[{}]{relevant\+\_\+components, }
+\item[{}]{total\+\_\+num\+\_\+of\+\_\+instances, }
+\item[{}]{instances\+\_\+percentages, }
+\item[{}]{num\+\_\+of\+\_\+groups}
+\end{DoxyParamCaption}
+)}}\label{namespacedata__generation_a0a700e2749ed935a31ac58217132cb76}
+
+
+Irrelevant components are filled up with random values from a uniform distribution Last, the generated instance vectors (measurement records or rows including their associated class label) of the data set are shuffled and returned as the final result. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em rules} & Numpy ndarray of rules organized as a 2\+D table of components and classes (last column) \\
+\hline
+{\em relevant\+\_\+components} & The list of relevant components \\
+\hline
+{\em total\+\_\+num\+\_\+of\+\_\+instances} & The desired number of instances \\
+\hline
+{\em instances\+\_\+percentages} & The split (percentage-\/wise) of instances from each category (class) \\
+\hline
+{\em num\+\_\+of\+\_\+groups} & If set to 10, then grouping doesn't have an effect because groups would have a single element each.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\+: The generated data set as a numpy array in which the last column corresponds to \hyperlink{namespacelearning__driver}{learning\+\_\+driver} labels. 
+\end{DoxyReturn}
+
+
+Definition at line 80 of file data\+\_\+generation.\+py.
+
+\hypertarget{namespacedata__generation_a723f3547cdfa6066526de7b8964a0a49}{\index{data\+\_\+generation@{data\+\_\+generation}!generate\+\_\+rules@{generate\+\_\+rules}}
+\index{generate\+\_\+rules@{generate\+\_\+rules}!data\+\_\+generation@{data\+\_\+generation}}
+\subsubsection[{generate\+\_\+rules}]{\setlength{\rightskip}{0pt plus 5cm}def data\+\_\+generation.\+generate\+\_\+rules (
+\begin{DoxyParamCaption}
+\item[{}]{class\+\_\+labels, }
+\item[{}]{num\+\_\+of\+\_\+components, }
+\item[{}]{relevant\+\_\+components, }
+\item[{}]{num\+\_\+of\+\_\+groups}
+\end{DoxyParamCaption}
+)}}\label{namespacedata__generation_a723f3547cdfa6066526de7b8964a0a49}
+
+
+Generate \hyperlink{namespacelearning__driver}{learning\+\_\+driver} rules as a big L\+U\+T where irrelevant values get an invalid value of -\/1 Valid values for components are only nonnegative integers in the interval \mbox{[}0, 9\mbox{]}. 
+
+Here, each possible combination of values among the relevant components becomes a rule. Thus, a table of decision rules is generated using random \hyperlink{namespacelearning__driver}{learning\+\_\+driver}. The length of the decision table depends on the number of groups on the components and the total number of relevant components. For example, for groups of 2 (pairs) and only 3 relevant components, there exists (10/2)$^\wedge$3 = 5$^\wedge$3 = 125 decision rules.
+
+
+\begin{DoxyParams}{Parameters}
+{\em class\+\_\+labels} & list of nonnegative integers for allowed classes (categories) \\
+\hline
+{\em num\+\_\+of\+\_\+components} & Total number of components (or features) \\
+\hline
+{\em relevant\+\_\+components} & A list of those relevant components in the rules and any data set generated employing the table of decision rules created here. \\
+\hline
+{\em num\+\_\+of\+\_\+groups} & If set to 10, then grouping doesn't have an effect since every value is a singleton.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\+: The numpy array of rules where the last column corresponds to \hyperlink{namespacelearning__driver}{learning\+\_\+driver} labels. 
+\end{DoxyReturn}
+
+
+Definition at line 34 of file data\+\_\+generation.\+py.
+
+
+
+\subsection{Variable Documentation}
+\hypertarget{namespacedata__generation_ab52d553b1eb5f4c6d065e0435753addc}{\index{data\+\_\+generation@{data\+\_\+generation}!class\+\_\+labels@{class\+\_\+labels}}
+\index{class\+\_\+labels@{class\+\_\+labels}!data\+\_\+generation@{data\+\_\+generation}}
+\subsubsection[{class\+\_\+labels}]{\setlength{\rightskip}{0pt plus 5cm}list data\+\_\+generation.\+class\+\_\+labels = \mbox{[}0, 1\mbox{]}}}\label{namespacedata__generation_ab52d553b1eb5f4c6d065e0435753addc}
+
+
+Definition at line 117 of file data\+\_\+generation.\+py.
+
+\hypertarget{namespacedata__generation_a4f985887946a96aa23f5ee6af6ec33fd}{\index{data\+\_\+generation@{data\+\_\+generation}!custom\+\_\+fmt@{custom\+\_\+fmt}}
+\index{custom\+\_\+fmt@{custom\+\_\+fmt}!data\+\_\+generation@{data\+\_\+generation}}
+\subsubsection[{custom\+\_\+fmt}]{\setlength{\rightskip}{0pt plus 5cm}list data\+\_\+generation.\+custom\+\_\+fmt = \mbox{[}\char`\"{}\%s\char`\"{} for fname in range({\bf num\+\_\+of\+\_\+components})\mbox{]}}}\label{namespacedata__generation_a4f985887946a96aa23f5ee6af6ec33fd}
+
+
+Definition at line 137 of file data\+\_\+generation.\+py.
+
+\hypertarget{namespacedata__generation_ad3ed025b5adf596264de6710e2b25996}{\index{data\+\_\+generation@{data\+\_\+generation}!dataset@{dataset}}
+\index{dataset@{dataset}!data\+\_\+generation@{data\+\_\+generation}}
+\subsubsection[{dataset}]{\setlength{\rightskip}{0pt plus 5cm}tuple data\+\_\+generation.\+dataset = {\bf generate\+\_\+dataset}({\bf rules}, {\bf relevant\+\_\+components}, {\bf total\+\_\+num\+\_\+of\+\_\+instances}, {\bf instances\+\_\+percentages}, {\bf quant\+\_\+levels})}}\label{namespacedata__generation_ad3ed025b5adf596264de6710e2b25996}
+
+
+Definition at line 165 of file data\+\_\+generation.\+py.
+
+\hypertarget{namespacedata__generation_ad40c466460ec72a381167165d38a2c07}{\index{data\+\_\+generation@{data\+\_\+generation}!dataset\+\_\+as\+\_\+str@{dataset\+\_\+as\+\_\+str}}
+\index{dataset\+\_\+as\+\_\+str@{dataset\+\_\+as\+\_\+str}!data\+\_\+generation@{data\+\_\+generation}}
+\subsubsection[{dataset\+\_\+as\+\_\+str}]{\setlength{\rightskip}{0pt plus 5cm}tuple data\+\_\+generation.\+dataset\+\_\+as\+\_\+str = np.\+hstack(({\bf dataset}\mbox{[}\+:, \+:-\/1\mbox{]}.astype('S2'), dataset\+\_\+labels.\+reshape(-\/1, 1)))}}\label{namespacedata__generation_ad40c466460ec72a381167165d38a2c07}
+
+
+Definition at line 171 of file data\+\_\+generation.\+py.
+
+\hypertarget{namespacedata__generation_a65485117b9e70dfb1f8046f6bf221338}{\index{data\+\_\+generation@{data\+\_\+generation}!dataset\+\_\+filename@{dataset\+\_\+filename}}
+\index{dataset\+\_\+filename@{dataset\+\_\+filename}!data\+\_\+generation@{data\+\_\+generation}}
+\subsubsection[{dataset\+\_\+filename}]{\setlength{\rightskip}{0pt plus 5cm}string data\+\_\+generation.\+dataset\+\_\+filename = {\bf path\+\_\+to\+\_\+output\+\_\+files}+\char`\"{}dataset-\/\char`\"{}}}\label{namespacedata__generation_a65485117b9e70dfb1f8046f6bf221338}
+
+
+Definition at line 167 of file data\+\_\+generation.\+py.
+
+\hypertarget{namespacedata__generation_a345ef2cc135025dccbfbba8502ba6d8d}{\index{data\+\_\+generation@{data\+\_\+generation}!dataset\+\_\+header@{dataset\+\_\+header}}
+\index{dataset\+\_\+header@{dataset\+\_\+header}!data\+\_\+generation@{data\+\_\+generation}}
+\subsubsection[{dataset\+\_\+header}]{\setlength{\rightskip}{0pt plus 5cm}string data\+\_\+generation.\+dataset\+\_\+header = \mbox{[}\char`\"{}d\char`\"{} + str(fname + 1) for fname in range({\bf num\+\_\+of\+\_\+components})\mbox{]}}}\label{namespacedata__generation_a345ef2cc135025dccbfbba8502ba6d8d}
+
+
+Definition at line 122 of file data\+\_\+generation.\+py.
+
+\hypertarget{namespacedata__generation_ad88beaf5c221ab8fbfeac2fd7aaafe65}{\index{data\+\_\+generation@{data\+\_\+generation}!dataset\+\_\+labels@{dataset\+\_\+labels}}
+\index{dataset\+\_\+labels@{dataset\+\_\+labels}!data\+\_\+generation@{data\+\_\+generation}}
+\subsubsection[{dataset\+\_\+labels}]{\setlength{\rightskip}{0pt plus 5cm}tuple data\+\_\+generation.\+dataset\+\_\+labels = np.\+where({\bf dataset}\mbox{[}\+:, -\/1\mbox{]} == 0, 'A', 'B')}}\label{namespacedata__generation_ad88beaf5c221ab8fbfeac2fd7aaafe65}
+
+
+Definition at line 170 of file data\+\_\+generation.\+py.
+
+\hypertarget{namespacedata__generation_ad5e85da3fcf335e51b7dacc9404e221b}{\index{data\+\_\+generation@{data\+\_\+generation}!filename\+\_\+time@{filename\+\_\+time}}
+\index{filename\+\_\+time@{filename\+\_\+time}!data\+\_\+generation@{data\+\_\+generation}}
+\subsubsection[{filename\+\_\+time}]{\setlength{\rightskip}{0pt plus 5cm}string data\+\_\+generation.\+filename\+\_\+time = {\bf k\+\_\+comp\+\_\+str}+\char`\"{}rel\+\_\+components-\/quantized\+\_\+butterfly-\/2014-\/12-\/27\char`\"{}}}\label{namespacedata__generation_ad5e85da3fcf335e51b7dacc9404e221b}
+
+
+Definition at line 133 of file data\+\_\+generation.\+py.
+
+\hypertarget{namespacedata__generation_a1c4e107080b11e6ef67edd30bfb93b05}{\index{data\+\_\+generation@{data\+\_\+generation}!instances\+\_\+percentages@{instances\+\_\+percentages}}
+\index{instances\+\_\+percentages@{instances\+\_\+percentages}!data\+\_\+generation@{data\+\_\+generation}}
+\subsubsection[{instances\+\_\+percentages}]{\setlength{\rightskip}{0pt plus 5cm}list data\+\_\+generation.\+instances\+\_\+percentages = \mbox{[}50, 50\mbox{]}}}\label{namespacedata__generation_a1c4e107080b11e6ef67edd30bfb93b05}
+
+
+Definition at line 118 of file data\+\_\+generation.\+py.
+
+\hypertarget{namespacedata__generation_a0750f715835d704f388842c370b48499}{\index{data\+\_\+generation@{data\+\_\+generation}!k\+\_\+comp\+\_\+str@{k\+\_\+comp\+\_\+str}}
+\index{k\+\_\+comp\+\_\+str@{k\+\_\+comp\+\_\+str}!data\+\_\+generation@{data\+\_\+generation}}
+\subsubsection[{k\+\_\+comp\+\_\+str}]{\setlength{\rightskip}{0pt plus 5cm}tuple data\+\_\+generation.\+k\+\_\+comp\+\_\+str = str(len({\bf relevant\+\_\+components}))}}\label{namespacedata__generation_a0750f715835d704f388842c370b48499}
+
+
+Definition at line 132 of file data\+\_\+generation.\+py.
+
+\hypertarget{namespacedata__generation_a4f08e445af07b6a8af849d8fd67dfbc9}{\index{data\+\_\+generation@{data\+\_\+generation}!now@{now}}
+\index{now@{now}!data\+\_\+generation@{data\+\_\+generation}}
+\subsubsection[{now}]{\setlength{\rightskip}{0pt plus 5cm}tuple data\+\_\+generation.\+now = datetime.\+datetime.\+now()}}\label{namespacedata__generation_a4f08e445af07b6a8af849d8fd67dfbc9}
+
+
+Definition at line 142 of file data\+\_\+generation.\+py.
+
+\hypertarget{namespacedata__generation_a577eb8996c6d5ddad4042ac0552f5aaa}{\index{data\+\_\+generation@{data\+\_\+generation}!num\+\_\+components@{num\+\_\+components}}
+\index{num\+\_\+components@{num\+\_\+components}!data\+\_\+generation@{data\+\_\+generation}}
+\subsubsection[{num\+\_\+components}]{\setlength{\rightskip}{0pt plus 5cm}string data\+\_\+generation.\+num\+\_\+components = 'int8'}}\label{namespacedata__generation_a577eb8996c6d5ddad4042ac0552f5aaa}
+
+
+Definition at line 160 of file data\+\_\+generation.\+py.
+
+\hypertarget{namespacedata__generation_ad68308d6e9bf4bd2485a44ce0c52315c}{\index{data\+\_\+generation@{data\+\_\+generation}!num\+\_\+of\+\_\+components@{num\+\_\+of\+\_\+components}}
+\index{num\+\_\+of\+\_\+components@{num\+\_\+of\+\_\+components}!data\+\_\+generation@{data\+\_\+generation}}
+\subsubsection[{num\+\_\+of\+\_\+components}]{\setlength{\rightskip}{0pt plus 5cm}int data\+\_\+generation.\+num\+\_\+of\+\_\+components = 10}}\label{namespacedata__generation_ad68308d6e9bf4bd2485a44ce0c52315c}
+
+
+Definition at line 121 of file data\+\_\+generation.\+py.
+
+\hypertarget{namespacedata__generation_ad7ee72f39a9a602967e77e4da382566a}{\index{data\+\_\+generation@{data\+\_\+generation}!path\+\_\+to\+\_\+output\+\_\+files@{path\+\_\+to\+\_\+output\+\_\+files}}
+\index{path\+\_\+to\+\_\+output\+\_\+files@{path\+\_\+to\+\_\+output\+\_\+files}!data\+\_\+generation@{data\+\_\+generation}}
+\subsubsection[{path\+\_\+to\+\_\+output\+\_\+files}]{\setlength{\rightskip}{0pt plus 5cm}string data\+\_\+generation.\+path\+\_\+to\+\_\+output\+\_\+files = \char`\"{}./Input\+Data/\char`\"{}}}\label{namespacedata__generation_ad7ee72f39a9a602967e77e4da382566a}
+
+
+Definition at line 125 of file data\+\_\+generation.\+py.
+
+\hypertarget{namespacedata__generation_adf1cda3bf67a0646998d7ad03f8d1337}{\index{data\+\_\+generation@{data\+\_\+generation}!quant\+\_\+levels@{quant\+\_\+levels}}
+\index{quant\+\_\+levels@{quant\+\_\+levels}!data\+\_\+generation@{data\+\_\+generation}}
+\subsubsection[{quant\+\_\+levels}]{\setlength{\rightskip}{0pt plus 5cm}int data\+\_\+generation.\+quant\+\_\+levels = 5}}\label{namespacedata__generation_adf1cda3bf67a0646998d7ad03f8d1337}
+
+
+Definition at line 129 of file data\+\_\+generation.\+py.
+
+\hypertarget{namespacedata__generation_afa9b1b91a7860372739bca028f41263b}{\index{data\+\_\+generation@{data\+\_\+generation}!relevant\+\_\+components@{relevant\+\_\+components}}
+\index{relevant\+\_\+components@{relevant\+\_\+components}!data\+\_\+generation@{data\+\_\+generation}}
+\subsubsection[{relevant\+\_\+components}]{\setlength{\rightskip}{0pt plus 5cm}list data\+\_\+generation.\+relevant\+\_\+components = \mbox{[}0, 1, 8\mbox{]}}}\label{namespacedata__generation_afa9b1b91a7860372739bca028f41263b}
+
+
+Definition at line 119 of file data\+\_\+generation.\+py.
+
+\hypertarget{namespacedata__generation_a18484efee600914bdb61f4082236d2ba}{\index{data\+\_\+generation@{data\+\_\+generation}!rules@{rules}}
+\index{rules@{rules}!data\+\_\+generation@{data\+\_\+generation}}
+\subsubsection[{rules}]{\setlength{\rightskip}{0pt plus 5cm}tuple data\+\_\+generation.\+rules = {\bf generate\+\_\+rules}({\bf class\+\_\+labels}, {\bf num\+\_\+of\+\_\+components}, {\bf relevant\+\_\+components}, {\bf quant\+\_\+levels})}}\label{namespacedata__generation_a18484efee600914bdb61f4082236d2ba}
+
+
+Definition at line 140 of file data\+\_\+generation.\+py.
+
+\hypertarget{namespacedata__generation_a1e7ee3bfd1df183fdb922bbc4e93d12e}{\index{data\+\_\+generation@{data\+\_\+generation}!rules\+\_\+as\+\_\+str@{rules\+\_\+as\+\_\+str}}
+\index{rules\+\_\+as\+\_\+str@{rules\+\_\+as\+\_\+str}!data\+\_\+generation@{data\+\_\+generation}}
+\subsubsection[{rules\+\_\+as\+\_\+str}]{\setlength{\rightskip}{0pt plus 5cm}tuple data\+\_\+generation.\+rules\+\_\+as\+\_\+str = np.\+hstack(({\bf rules}\mbox{[}\+:, \+:-\/1\mbox{]}.astype('S2'), rules\+\_\+labels.\+reshape(-\/1, 1)))}}\label{namespacedata__generation_a1e7ee3bfd1df183fdb922bbc4e93d12e}
+
+
+Definition at line 148 of file data\+\_\+generation.\+py.
+
+\hypertarget{namespacedata__generation_a2fd941c060f70244057a35a916a6a9d7}{\index{data\+\_\+generation@{data\+\_\+generation}!rules\+\_\+filename@{rules\+\_\+filename}}
+\index{rules\+\_\+filename@{rules\+\_\+filename}!data\+\_\+generation@{data\+\_\+generation}}
+\subsubsection[{rules\+\_\+filename}]{\setlength{\rightskip}{0pt plus 5cm}string data\+\_\+generation.\+rules\+\_\+filename = {\bf path\+\_\+to\+\_\+output\+\_\+files}+\char`\"{}rules-\/\char`\"{}}}\label{namespacedata__generation_a2fd941c060f70244057a35a916a6a9d7}
+
+
+Definition at line 144 of file data\+\_\+generation.\+py.
+
+\hypertarget{namespacedata__generation_aa245bd201fe9810d8a8d8d615c4915ee}{\index{data\+\_\+generation@{data\+\_\+generation}!rules\+\_\+labels@{rules\+\_\+labels}}
+\index{rules\+\_\+labels@{rules\+\_\+labels}!data\+\_\+generation@{data\+\_\+generation}}
+\subsubsection[{rules\+\_\+labels}]{\setlength{\rightskip}{0pt plus 5cm}tuple data\+\_\+generation.\+rules\+\_\+labels = np.\+where({\bf rules}\mbox{[}\+:, -\/1\mbox{]} == 0, 'A', 'B')}}\label{namespacedata__generation_aa245bd201fe9810d8a8d8d615c4915ee}
+
+
+Definition at line 147 of file data\+\_\+generation.\+py.
+
+\hypertarget{namespacedata__generation_ae8c6a78af0481f316865220c829b86d2}{\index{data\+\_\+generation@{data\+\_\+generation}!save\+\_\+class\+\_\+as\+\_\+string@{save\+\_\+class\+\_\+as\+\_\+string}}
+\index{save\+\_\+class\+\_\+as\+\_\+string@{save\+\_\+class\+\_\+as\+\_\+string}!data\+\_\+generation@{data\+\_\+generation}}
+\subsubsection[{save\+\_\+class\+\_\+as\+\_\+string}]{\setlength{\rightskip}{0pt plus 5cm}data\+\_\+generation.\+save\+\_\+class\+\_\+as\+\_\+string = True}}\label{namespacedata__generation_ae8c6a78af0481f316865220c829b86d2}
+
+
+Definition at line 130 of file data\+\_\+generation.\+py.
+
+\hypertarget{namespacedata__generation_a963ce4f506a2b3bb6acb94915445f716}{\index{data\+\_\+generation@{data\+\_\+generation}!total\+\_\+num\+\_\+of\+\_\+instances@{total\+\_\+num\+\_\+of\+\_\+instances}}
+\index{total\+\_\+num\+\_\+of\+\_\+instances@{total\+\_\+num\+\_\+of\+\_\+instances}!data\+\_\+generation@{data\+\_\+generation}}
+\subsubsection[{total\+\_\+num\+\_\+of\+\_\+instances}]{\setlength{\rightskip}{0pt plus 5cm}int data\+\_\+generation.\+total\+\_\+num\+\_\+of\+\_\+instances = 100000}}\label{namespacedata__generation_a963ce4f506a2b3bb6acb94915445f716}
+
+
+Definition at line 120 of file data\+\_\+generation.\+py.
+
+\hypertarget{namespacedata__generation_a65cdb95b35877149855b39ef209ada8e}{\index{data\+\_\+generation@{data\+\_\+generation}!use\+\_\+string\+\_\+labels@{use\+\_\+string\+\_\+labels}}
+\index{use\+\_\+string\+\_\+labels@{use\+\_\+string\+\_\+labels}!data\+\_\+generation@{data\+\_\+generation}}
+\subsubsection[{use\+\_\+string\+\_\+labels}]{\setlength{\rightskip}{0pt plus 5cm}data\+\_\+generation.\+use\+\_\+string\+\_\+labels = {\bf save\+\_\+class\+\_\+as\+\_\+string},\textbackslash{}}}\label{namespacedata__generation_a65cdb95b35877149855b39ef209ada8e}
+
+
+Definition at line 159 of file data\+\_\+generation.\+py.
+
+\hypertarget{namespacedata__generation_abf6964c9992abb3c8c479fa568833f1c}{\index{data\+\_\+generation@{data\+\_\+generation}!will\+\_\+generate\+\_\+rules@{will\+\_\+generate\+\_\+rules}}
+\index{will\+\_\+generate\+\_\+rules@{will\+\_\+generate\+\_\+rules}!data\+\_\+generation@{data\+\_\+generation}}
+\subsubsection[{will\+\_\+generate\+\_\+rules}]{\setlength{\rightskip}{0pt plus 5cm}data\+\_\+generation.\+will\+\_\+generate\+\_\+rules = True}}\label{namespacedata__generation_abf6964c9992abb3c8c479fa568833f1c}
+
+
+Definition at line 128 of file data\+\_\+generation.\+py.
+
