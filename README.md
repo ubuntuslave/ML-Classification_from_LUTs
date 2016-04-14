@@ -13,6 +13,10 @@ Multidimensional Classification using LUTs
 The **goal** is to design a *labeled two class data set* of 10-dimensional vectors that has test set classification accuracy less than 60% on some popular classifiers. 
 However, our decision rule was designed such that it can perform with greater than 90% accuracy on the test set.
 
+### Report
+
+The [project report](https://github.com/ubuntuslave/ML-Classification_from_LUTs/blob/master/ML_Final_Project_Report.pdf) for our solution.
+
 ### Data Set Generation
 
 `data_generation.py` is a *toolbox* written in Python for data set generation satisfying the problem specifications.
