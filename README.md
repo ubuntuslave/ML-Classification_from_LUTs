@@ -40,7 +40,7 @@ Once a `MateFinder` object has been instantiated through the constructor, the in
 The program driving the learning from data and estimating the accuracy of the learned decision rule on the testing set 
 is driven by `learning_driver.py`
 
-##Installing
+## Installation
 
 ### From source ###
 
