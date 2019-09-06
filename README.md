@@ -28,7 +28,7 @@ The number of decision rules is reduced exponentially based upon the level of ma
 ### Learning Method
 
 Supervised Learning method for binary classification based on mating (grouping of values) across the supplied data set of components and classification labels.
-The learning algorithm is implemented in 'mate_learning.py`. It consists of exhausting all the possibilities as long as accuracy of correct classification can be increased.
+The learning algorithm is implemented in `mate_learning.py`. It consists of exhausting all the possibilities as long as accuracy of correct classification can be increased.
 
 We define a `MateFinder` class for the particular binary classification problem based on mates (usually groups of 2 - pairs) across each component of a discrete-valued data set.
 The `MateFinder` class provides procedures such as the removal of irrelevant components (selection of relevant components),
@@ -56,6 +56,6 @@ After fulfilling the module dependencies, just run the scripts, such as:
 
 ## More info
 
-***Documentation***:  can be found in the 'docs' folder or regenerated via [doxypy](http://code.foosel.org/doxypy)
+***Documentation***:  can be found in the `documentation` folder, or it can be regenerated via [doxypy](http://code.foosel.org/doxypy)
 
 
